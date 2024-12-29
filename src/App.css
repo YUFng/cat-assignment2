@@ -36,3 +36,158 @@
     transform: rotate(360deg);
   }
 }
+/* General App Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #85e0e0, #fce38a); /* Light blue-yellow gradient */
+  color: #333;
+  text-align: center;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  max-width: 800px;
+  margin: 10px auto;
+  text-align: center;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #85e0e0, #fce38a);
+  padding: 30px 20px;
+  text-align: center;
+  color: #004d40;
+}
+
+.hero-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.gallery-item {
+  max-width: 550px; /* Optional: Set a fixed width for each image and description */
+  text-align: center; /* Center-align the content inside */
+}
+
+.gallery-image {
+  width: 550px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.image-description {
+  margin-top: 10px; /* Space between the image and the description */
+  font-size: 14px;
+  color: #444;
+}
+
+/* Info Section */
+.info-section {
+  padding: 30px 20px;
+}
+
+.info-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Toolbar Styles */
+.toolbar {
+  width: 100%;
+  background-color: #00796b; /* Teal green background */
+  padding: 10px 20px; /* Adds space inside the toolbar */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow under the toolbar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Place items at the edges */
+}
+
+.toolbar-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-title {
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* Navigation Buttons in Toolbar */
+.toolbar-nav {
+  display: flex;
+  gap: 15px; /* Adds space between buttons */
+}
+
+.toolbar-button {
+  font-size: 1rem;
+  padding: 10px 15px;
+  background-color: white; /* Buttons have a white background */
+  color: #00796b; /* Text matches the toolbar background */
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.toolbar-button:hover {
+  background-color: #004d40; /* Darker teal background on hover */
+  color: white; /* Light text on hover for contrast */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Content Wrapper */
+div button{
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer (Optional) */
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
