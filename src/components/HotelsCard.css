@@ -1,0 +1,17 @@
+.hotel-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.hotel-image {
+    width: 100%;
+    border-radius: 8px;
+}
+.hotel-info h3 {
+    margin: 8px 0;
+    font-size: 18px;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage"; // Importing the HomePage component
 import TouristSpotsPage from "./pages/TouristSpotsPage"; // Importing the TouristSpotsPage component
+import HotelsPage from './pages/HotelsPage';
 import "./App.css"; // Ensure you import your CSS file for styling.
 
 function App() {
@@ -19,10 +20,11 @@ function App() {
                 </div>
             </header>
             <div>
-            <Routes>
+                <Routes>
                     {/* Define your routes */}
                     <Route path="/" element={<HomePage />} />
                     <Route path="/tourist-spots" element={<TouristSpotsPage />} />
+                    <Route path="/hotels" element={<HotelsPage />} />
                 </Routes>
             </div>
         </Router>
