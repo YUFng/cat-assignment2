@@ -1,8 +1,65 @@
 /* Style for the entire Tourist Spots page */
 .tourist-spots-page {
     padding: 20px;
+    text-align: center;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 fixed columns */
+    grid-template-rows: repeat(2, auto); /* 2 fixed rows with auto height */
+    gap: 20px; /* Space between each item */
+    justify-items: center; /* Center-align grid items horizontally */
+    align-items: start; /* Align items at the top */
+    width: 100%;
+    max-width: 1200px; /* Optional: Limit grid container width */
+    margin: 80px auto 0; /* Center the grid */
+    min-height: 100vh;
+    color: #fff;
+    position: relative; /* Ensure it's part of the layout flow */
+    z-index: 1;
+}
+
+.tourist-spots-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Ensure the overlay sits behind the content */
+}
+
+.tourist-spots-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Flexible columns */
+    gap: 20px;
+    margin: 0 auto;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center;
+    max-width: 1200px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #fff; /* Keep text white for readability on the background */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: Adds a shadow for better text visibility */
+}
+
+.tourist-spots-page p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.tourist-spot {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .tourist-spots-page h1 {
@@ -11,10 +68,16 @@
     margin-bottom: 20px;
 }
 
-/* Style for the grid of tourist spot cards */
-.tourist-spots-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 10px;
+/* Responsive design: Adjust cards for smaller screens */
+@media (max-width: 900px) {
+    .tourist-spots-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
 }
+
+@media (max-width: 600px) {
+    .tourist-spots-container {
+        grid-template-columns: 1fr; /* 1 card per row */
+    }
+}
+

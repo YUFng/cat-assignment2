@@ -1,40 +1,92 @@
-/* Style for individual tourist spot card */
+/* Card styling */
 .tourist-spot-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    padding: 16px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #ddd; /* Add a light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Space inside the card */
+    text-align: center; /* Center-align the card content */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Fixed width for the card */
+    height: 400px; /* Fixed height for the card */
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
+/* Hover effect for cards */
 .tourist-spot-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 .tourist-spot-image {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
+.tourist-spot-info {
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
 .tourist-spot-name {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .tourist-spot-description {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #666;
-    margin-bottom: 8px;
+    margin: 5px 0; /* Space between lines */
+    line-height: 1.3;
 }
 
-.tourist-spot-location,
 .tourist-spot-rating {
-    font-size: 0.85rem;
-    color: #444;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-stars {
+    display: inline-flex;
+    margin-right: 5px;
+}
+
+.star {
+    font-size: 1.2rem;
+    color: #ffd700; /* Gold color for full stars */
+    margin: 0 2px;
+}
+
+.half-star {
+    color: #ffd700; /* Gold color for half star */
+}
+
+.empty-star {
+    color: #ccc; /* Gray color for empty stars */
+}
+
+.rating-value {
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 5px;
+}
+
+/* Optional: Add more emphasis to location and rating */
+.tourist-spot-card .location,
+.tourist-spot-card .rating {
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.no-rating {
+    font-style: italic;
+    color: #999;
 }
