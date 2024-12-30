@@ -1,0 +1,106 @@
+.hotels-page {
+    padding: 80px; /* Increased padding */
+    text-align: center;
+    background-color: #fff; /* Ensure background is white */
+    color: #333; /* Default text color is dark */
+}
+
+.hotels-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style the header */
+.hotels-header {
+    margin-bottom: 0px; /* Increased bottom margin */
+    font-family: Arial, sans-serif;
+    color: #222; /* Slightly darker color for better readability */
+}
+
+.hotels-header h1 {
+    font-size: 2em; /* Increased font size */
+    margin-bottom: 15px; /* Increased bottom margin */
+    color: #111; /* Strong dark color for headers */
+}
+
+.hotels-header p {
+    font-size: 1.3em; /* Increased font size */
+    color: #555; /* Medium contrast color for paragraphs */
+}
+
+/* Style the search bar */
+.hotels-search {
+    padding: 15px; /* Increased padding */
+    width: 80%;
+    max-width: 500px; /* Increased max-width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 15px auto 30px auto; /* Increased margin */
+    font-size: 1.2em; /* Increased font size */
+    color: #333; /* Ensure input text is visible */
+    background-color: #fff; /* White background for the input */
+}
+
+/* Style the reviews */
+.hotel-reviews {
+    margin-top: 40px; /* Increased margin */
+    text-align: left;
+    color: #333; /* Default text color for reviews */
+}
+
+.hotel-reviews h3 {
+    font-size: 1.5em; /* Increased font size */
+    margin-bottom: 15px; /* Increased margin */
+    color: #111; /* Darker color for emphasis */
+}
+
+.hotel-reviews ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hotel-reviews li {
+    background: #f9f9f9; /* Light gray background for reviews */
+    margin: 10px 0; /* Increased margin */
+    padding: 15px; /* Increased padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1em; /* Increased font size */
+    color: #333; /* Ensure text is visible */
+}
+
+.hotel-rating {
+    font-size: 1.5em; /* Increased font size for stars */
+    color: #FFD700; /* Gold color for stars */
+    margin: 15px 0; /* Increased margin */
+}
+
+.hotel-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px; /* Increased padding */
+    margin: 30px; /* Increased margin */
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+    transform: translateY(-15px); /* Slightly moves the card up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background-color: #f9f9f9; /* Optional: Change background color */
+}
+
+.hotel-image {
+    width: 100%;
+    max-height: 250px; /* Increased max height */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.hotel-card:hover .hotel-image {
+    transform: scale(1.1); /* Zooms in the image more */
+}
