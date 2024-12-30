@@ -24,7 +24,7 @@ function App() {
                     {/* Define your routes */}
                     <Route path="/" element={<HomePage />} />
                     <Route path="/tourist-spots" element={<TouristSpotsPage />} />
-                    <Route path="/hotels" element={<HotelsPage />} />
+                    <Route path="/hotel" element={<HotelsPage />} />
                 </Routes>
             </div>
         </Router>
