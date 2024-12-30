@@ -1,0 +1,103 @@
+.hero-section {
+    text-align: center; /* If you want to center-align text */
+    font-family: Arial, sans-serif; /* Add font styles if needed */
+    padding: 0px 20px; /* Optional padding */
+}
+
+.hero-section h2 {
+    font-size: 5rem; /* Large text */
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for readability */
+    opacity: 0.9; /* Slight transparency */
+    margin-bottom: 20px; /* Space between heading and paragraph */
+}
+
+.hero-section p {
+    font-size: 2rem; /* Larger paragraph text */
+    line-height: 1.8; /* Comfortable line spacing */
+    color: rgba(255, 255, 255, 0.9); /* More transparent for secondary text */
+    max-width: 800px; /* Restrict width for better readability */
+    text-align: center; /* Center align the content */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 30px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.gallery-section h2 {
+    color: #000; /* Set the heading color for Gallery */
+    text-align: center; /* Optional: Center the heading */
+    font-size: 2rem; /* Optional: Adjust the size of the text */
+}
+
+.gallery-item {
+    max-width: 550px; /* Optional: Set a fixed width for each image and description */
+    text-align: center; /* Center-align the content inside */
+}
+
+.gallery-image {
+    width: 550px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.image-description {
+    margin-top: 10px; /* Space between the image and the description */
+    font-size: 14px;
+    color: #444;
+}
+
+/* Info Section */
+.info-section {
+    padding: 30px 20px;
+}
+
+.info-section h2 {
+    color: #000000; /* Set the heading color (orange-red) */
+    text-align: center; /* Optional: Center the heading */
+    font-size: 2rem; /* Optional: Adjust font size */
+    font-weight: bold; /* Optional: Make it bold */
+    margin-bottom: 20px; /* Add space below heading */
+}
+.info-section p {
+    color: #000000; /* Green for paragraph text */
+    font-size: 1rem; /* Paragraph text size */
+    line-height: 1.6; /* Increase text spacing for readability */
+    text-align: center; /* Optional: Keep paragraph centered */
+    margin: 10px 0; /* Spacing above and below each paragraph */
+}
+
+.info-section img {
+    display: block; /* Treat image as block-level element */
+    margin: 20px auto; /* Center the image with margin */
+    max-width: 100%; /* Responsive image */
+    border-radius: 10px; /* Optional: Rounded image corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.info-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}

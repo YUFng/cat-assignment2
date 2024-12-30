@@ -1,0 +1,20 @@
+/* Style for the entire Tourist Spots page */
+.tourist-spots-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.tourist-spots-page h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style for the grid of tourist spot cards */
+.tourist-spots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}

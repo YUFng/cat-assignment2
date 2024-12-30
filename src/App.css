@@ -1,140 +1,40 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 /* General App Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #85e0e0, #fce38a); /* Light blue-yellow gradient */
-  color: #333;
+  background-color: #ffffff; /* Set background to white */
+  color: #ffffff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-h1, h2 {
+h1.app-title {
   text-align: center;
   margin-top: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-p {
-  max-width: 800px;
-  margin: 10px auto;
-  text-align: center;
-  line-height: 1.6;
-  color: #444;
-}
-
-/* Hero Section */
-.hero-section {
-  background: linear-gradient(to right, #85e0e0, #fce38a);
-  padding: 30px 20px;
-  text-align: center;
-  color: #004d40;
-}
-
-.hero-image {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Gallery Section */
-.gallery-section {
-  padding: 30px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
-}
-
-.gallery-item {
-  max-width: 550px; /* Optional: Set a fixed width for each image and description */
-  text-align: center; /* Center-align the content inside */
-}
-
-.gallery-image {
-  width: 550px;
-  height: 350px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.gallery-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-.image-description {
-  margin-top: 10px; /* Space between the image and the description */
-  font-size: 14px;
-  color: #444;
-}
-
-/* Info Section */
-.info-section {
-  padding: 30px 20px;
-}
-
-.info-image {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+* {
+  box-sizing: border-box; /* Includes padding and border in width calculations */
+  margin: 0; /* Removes default margins */
+  padding: 0; /* Removes default paddings */
 }
 
 /* Toolbar Styles */
 .toolbar {
-  width: 100%;
-  background-color: #00796b; /* Teal green background */
-  padding: 10px 20px; /* Adds space inside the toolbar */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow under the toolbar */
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Place items at the edges */
+  width: 100%; /* Full width of the page */
+  padding: 10px 20px; /* Optional inner spacing */
+  position: absolute; /* Make the toolbar float above other content */
+  top: 0; /* Position at the top of the page */
+  left: 0; /* Align to the left of the viewport */
+  color: white; /* Text color */
+  z-index: 10; /* Ensure toolbar is above other elements */
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .toolbar-content {
@@ -144,11 +44,6 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.app-title {
-  font-size: 1.8rem;
-  color: white;
 }
 
 /* Navigation Buttons in Toolbar */
@@ -164,7 +59,7 @@ p {
   color: #00796b; /* Text matches the toolbar background */
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Subtle button shadow */
   font-weight: bold;
   transition: all 0.3s ease;
 }
@@ -173,21 +68,4 @@ p {
   background-color: #004d40; /* Darker teal background on hover */
   color: white; /* Light text on hover for contrast */
   transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Content Wrapper */
-div button{
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.8); /* Transparent white background */
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer (Optional) */
-footer {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #555;
 }

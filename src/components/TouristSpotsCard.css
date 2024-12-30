@@ -1,0 +1,40 @@
+/* Style for individual tourist spot card */
+.tourist-spot-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tourist-spot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tourist-spot-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tourist-spot-name {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.tourist-spot-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.tourist-spot-location,
+.tourist-spot-rating {
+    font-size: 0.85rem;
+    color: #444;
+}
