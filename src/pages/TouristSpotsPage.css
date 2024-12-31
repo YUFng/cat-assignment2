@@ -14,7 +14,7 @@
     max-width: 1200px; /* Optional: Limit grid container width */
     margin: 80px auto 0; /* Center the grid */
     min-height: 100vh;
-    color: #fff;
+    color: #000000;
     position: relative; /* Ensure it's part of the layout flow */
     z-index: 1;
 }
@@ -44,7 +44,7 @@
 h1 {
     margin-bottom: 30px;
     font-size: 2rem;
-    color: #fff; /* Keep text white for readability on the background */
+    color: #000000; /* Keep text white for readability on the background */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: Adds a shadow for better text visibility */
 }
 

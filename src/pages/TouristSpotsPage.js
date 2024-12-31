@@ -63,6 +63,7 @@ const TouristSpotsPage = () => {
                 backgroundColor: "#f9f9f9",
                 backgroundPosition: "center",
                 minHeight: "100vh",
+                minWidth: "100vw",
                 color: "#fff",
             }}
         >
