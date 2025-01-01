@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food and Drink</title>
+    <link rel="stylesheet" href="FoodBeverage.css">
+</head>
+<body>
+<header>
+    <h1>Visit Penang</h1>
+    <p>Explore Food and Beverages</p>
+</header>
+
+<div id="buttons-section">
+    <div class="main-button" id="food-button">
+        <h2>Food</h2>
+    </div>
+    <div class="main-button" id="drink-button">
+        <h2>Drinks</h2>
+    </div>
+</div>
+
+<div class="category" id="food-section">
+    <div class="section-header">
+        <h2>Food Options</h2>
+        <p>Explore a variety of cuisines!</p>
+    </div>
+    <div class="grid">
+        <div class="card" data-description="Delicious Indian food with rich flavors and spices.">
+            <img src="../../public/images/3.jpg" alt="Indian Food">
+            <h4>Indian Cuisine</h4>
+        </div>
+        <div class="card" data-description="Authentic Chinese dishes with a range of tastes.">
+            <img src="../../public/images/2.jpg" alt="Chinese Food">
+            <h4>Chinese Cuisine</h4>
+        </div>
+        <div class="card" data-description="Traditional Malay dishes with unique ingredients.">
+            <img src="../../public/images/3.jpg" alt="Malay Food">
+            <h4>Malay Cuisine</h4>
+        </div>
+    </div>
+</div>
+
+<div class="category" id="drink-section">
+    <div class="section-header">
+        <h2>Drink Options</h2>
+        <p>Refreshing beverages to enjoy!</p>
+    </div>
+    <div class="grid">
+        <div class="card" data-description="Chilled beverages to quench your thirst.">
+            <img src="../../public/images/5.jpg" alt="Cold Drink">
+            <h4>Cold Drinks</h4>
+        </div>
+        <div class="card" data-description="Warm drinks for a cozy experience.">
+            <img src="../../public/images/4.jpg" alt="Hot Drink">
+            <h4>Hot Drinks</h4>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close-button" id="close-button">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Visit Penang. All Rights Reserved.</p>
+</footer>
+<script src="FoodBeverage.js"></script>
+</body>
+</html>
