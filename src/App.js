@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage"; // Importing the HomePage component
 import TouristSpotsPage from "./pages/TouristSpotsPage"; // Importing the TouristSpotsPage component
 import HotelsPage from './pages/HotelsPage';
+import FoodBeverage from "./pages/FoodBeverage";
 import "./App.css"; // Ensure you import your CSS file for styling.
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/tourist-spots" element={<TouristSpotsPage />} />
                     <Route path="/hotel" element={<HotelsPage />} />
+                    <Route path="/foodbeverage" element={<FoodBeverage />} />
                 </Routes>
             </div>
         </Router>
