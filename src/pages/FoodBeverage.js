@@ -9,7 +9,7 @@ function scrollToSection(sectionId) {
 // Event listeners for the main buttons
 document.getElementById('food-button').addEventListener('click', () => {
     scrollToSection('food-section');
-});
+});   
 
 document.getElementById('drink-button').addEventListener('click', () => {
     scrollToSection('drink-section');
