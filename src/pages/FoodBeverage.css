@@ -60,13 +60,13 @@ header p {
 
 /* Add background images for buttons */
 #food-button {
-    background-image: url('/images/food.jpg'); /* Food background */
+    background-image: url('../../public/images/food.jpg'); /* Food background */
     background-size: cover; /* Cover the entire button with the background */
     background-position: center; /* Center the background image */
 }
 
 #drink-button {
-    background-image: url('/images/drink.jpg'); /* Drink background */
+    background-image: url('../../public/images/drink.jpg'); /* Drink background */
     background-size: cover; /* Cover the entire button with the background */
     background-position: center; /* Center the background image */
 }
