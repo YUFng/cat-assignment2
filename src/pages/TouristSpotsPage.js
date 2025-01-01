@@ -58,7 +58,7 @@ const TouristSpotsPage = () => {
         <div
             className="tourist-spots-page"
             style={{
-                backgroundImage: `url(${"./images/penang-bridge.jpg"})`,
+                backgroundImage: `url(&{"./images/penang-bridge.jpg"})`,
                 backgroundSize: "cover",
                 backgroundColor: "#f9f9f9",
                 backgroundPosition: "center",

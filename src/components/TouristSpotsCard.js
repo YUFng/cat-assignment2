@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './TouristSpotsCard.css';
+import CustomModal from './CustomModal';
 
 const TouristSpotsCard = ({ name, description, image, mapLink, rating }) => {
     const renderStars = (rating) => {
@@ -25,11 +26,30 @@ const TouristSpotsCard = ({ name, description, image, mapLink, rating }) => {
         );
     };
 
+    const [showModal, setShowModal] = useState(false);
+    const handleCardClick = () => {
+        setShowModal(true); // Open the modal when the card is clicked
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false); // Close the modal
+    };
+
+    const handleMapClick = () => {
+        window.open(mapLink, "_blank"); // Open the map in a new tab
+        setShowModal(false); // Close the modal
+    };
+
+    const handleHotelClick = () => {
+        window.open("/hotel", "_blank"); // Redirect to the hotel page
+        setShowModal(false); // Close the modal
+    };
+
     return (
+        <>
         <div
             className="tourist-spot-card"
-            onClick={() => window.open(mapLink, "_blank")}
-        >
+            onClick={handleCardClick}>
             <img src={image} alt={name} className="tourist-spot-image" />
             <div className="tourist-spot-info">
                 <h3 className="tourist-spot-name">{name}</h3>
@@ -46,6 +66,16 @@ const TouristSpotsCard = ({ name, description, image, mapLink, rating }) => {
                 </div>
             </div>
         </div>
+
+        <CustomModal
+                show={showModal}
+                title={`Visit ${name}`}
+                description="What would you like to do?"
+                onMapClick={handleMapClick}
+                onHotelClick={handleHotelClick}
+                onClose={handleCloseModal}
+            />
+        </>
     );
 };
 
