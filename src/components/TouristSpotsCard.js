@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './TouristSpotsCard.css';
 import CustomModal from './CustomModal';
 
-const TouristSpotsCard = ({ name, description, image, mapLink, rating }) => {
+const TouristSpotsCard = ({ name, description, image, mapLink, rating, style }) => {
     const renderStars = (rating) => {
         // Default rating to 0 if missing or invalid
         if (!rating || typeof rating !== "number") {
@@ -49,10 +49,10 @@ const TouristSpotsCard = ({ name, description, image, mapLink, rating }) => {
         <>
         <div
             className="tourist-spot-card"
-            onClick={handleCardClick}>
+            onClick={handleCardClick} style={style}>
             <img src={image} alt={name} className="tourist-spot-image" />
             <div className="tourist-spot-info">
-                <h3 className="tourist-spot-name">{name}</h3>
+                <h2 className="tourist-spot-name">{name}</h2>
                 <p className="tourist-spot-description">{description}</p>
                 <div className="tourist-spot-rating">
                     {rating ? (

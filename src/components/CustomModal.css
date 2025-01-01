@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,57 +12,125 @@
 }
 
 .modal-content {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
+    padding-top: 40px;
     max-width: 400px;
     width: 90%;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb); /* Vibrant gradient */
+    padding: 30px;
+    border-radius: 20px; /* Rounded corners for smooth look */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Shadow for elevation */
+    animation: slide-in 0.3s ease;
+}
+
+@keyframes slide-in {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-overlay::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
 }
 
 .modal-content h2 {
-    margin-bottom: 10px;
-    color: #333;
+    margin-bottom: 15px;
+    color: #4d4d4d;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 .modal-content p {
     margin-bottom: 20px;
-    color: #666;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .modal-buttons {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
+    gap: 10px;
 }
 
 .button-map,
 .button-hotel {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ffffff; /* White background */
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+    border-radius: 50px; /* Rounded buttons */
+    padding: 12px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+.button-map {
+    background: #42a5f5; /* Light blue background */
+    color: #fff;
+}
+
+/* Hover effect for Map Button */
 .button-map:hover {
-    background-color: #0056b3;
+    background: #1e88e5; /* Darker blue */
+    transform: scale(1.05); /* Slight scale-up effect */
 }
 
+/* Specific styling for Hotel Button */
+.button-hotel {
+    background: #66bb6a; /* Light green background */
+    color: #fff;
+}
+
+/* Hover effect for Hotel Button */
 .button-hotel:hover {
-    background-color: #004085;
+    background: #43a047; /* Darker green */
+    transform: scale(1.05); /* Slight scale-up effect */
 }
 
-.close-modal {
-    background: transparent;
-    color: #999;
-    font-size: 1.2em;
+/* Close (Cancel) button styling */
+.close-modal-btn {
+    background: #333;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
     border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     position: absolute;
     right: 20px;
     top: 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover effect for close button */
+.close-modal-btn:hover {
+    background: #555;
+    transform: rotate(90deg); /* Adds a playful effect */
+}
+
+/* Close button (Cancel) icon hover effect */
+.close-modal-btn:focus {
+    outline: none;
 }
