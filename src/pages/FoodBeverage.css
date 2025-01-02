@@ -112,7 +112,7 @@ header p {
 /* Cards */
 .card {
     width: 300px;
-    height: 300px; /* Set height for the card */
+    height: 700px; /* Set height for the card */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -126,7 +126,7 @@ header p {
 /* Adjusted Image Style */
 .card img {
     width: calc(100% - 20px); /* Image fills card width minus padding */
-    height: auto; /* Maintain aspect ratio */
+    height: calc(100% - 0px); /* Maintain aspect ratio */
     max-height: 60%; /* Limit the height of the image to 60% of the card height */
     object-fit: cover; /* Maintain aspect ratio of the image */
     margin: 10px auto; /* Center the image and add space around */
@@ -198,3 +198,22 @@ header p {
     }
 }
 
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.star {
+    font-size: 1.2rem;
+    color: gold;
+    margin: 0 2px;
+}
+
+/* New Styles for Restaurant List */
+.location-button {
+    margin-left: 10px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}

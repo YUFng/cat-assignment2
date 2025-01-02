@@ -1,18 +1,38 @@
 import React, { useRef, useState } from 'react';
 import './FoodBeverage.css';
 
+const StarRating = ({ rating }) => {
+    const fullStar = '★';
+    const emptyStar = '☆';
+    const halfStar = '⯪'; // Character for half star
+
+    return (
+        <div className="star-rating">
+            {Array.from({ length: 5 }, (_, index) => {
+                if (index < Math.floor(rating)) {
+                    return <span key={index} className="star">{fullStar}</span>;
+                } else if (index === Math.floor(rating) && rating % 1 !== 0) {
+                    return <span key={index} className="star half">{halfStar}</span>; // Render half star
+                } else {
+                    return <span key={index} className="star">{emptyStar}</span>;
+                }
+            })}
+        </div>
+    );
+};
+
 const FoodBeverage = () => {
     const foodRef = useRef(null);
     const beverageRef = useRef(null);
     const [modalVisible, setModalVisible] = useState(false);
-    const [selectedItem, setSelectedItem] = useState({ title: '', description: '' });
+    const [selectedItem, setSelectedItem] = useState({ title: '', description: '', restaurants: [] });
 
     const scrollToSection = (ref) => {
         ref.current.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const handleCardClick = (title, description) => {
-        setSelectedItem({ title, description });
+    const handleCardClick = (item) => {
+        setSelectedItem(item);
         setModalVisible(true);
     };
 
@@ -22,45 +42,16 @@ const FoodBeverage = () => {
 
     const foodOptions = [
         {
-            title: 'Indian Cuisine',
-            description: 'Delicious Indian dishes with a variety of spices.',
+            title: 'Nasi Kandar',
+            description: 'This is one of the food experiences...',
             image: 'images/indian.jpg',
+            rating: 4.5,
+            restaurants: [
+                { name: 'Restaurant A', location: 'Location A', lat: 4.2105, lng: 101.9758 },
+                { name: 'Restaurant B', location: 'Location B', lat: 4.2105, lng: 101.9758 },
+            ],
         },
-        {
-            title: 'Chinese Cuisine',
-            description: 'Tasty Chinese dishes including noodles and dumplings.',
-            image: 'images/chinese.jpg',
-        },
-        {
-            title: 'Malay Cuisine',
-            description: 'Savory Malay dishes with rich flavors.',
-            image: 'images/malay.jpg',
-        },
-        {
-            title: 'Malay Cuisine',
-            description: 'Savory Malay dishes with rich flavors.',
-            image: 'images/malay.jpg',
-        },
-        {
-            title: 'Malay Cuisine',
-            description: 'Savory Malay dishes with rich flavors.',
-            image: 'images/malay.jpg',
-        },
-        {
-            title: 'Malay Cuisine',
-            description: 'Savory Malay dishes with rich flavors.',
-            image: 'images/malay.jpg',
-        },
-        {
-            title: 'Malay Cuisine',
-            description: 'Savory Malay dishes with rich flavors.',
-            image: 'images/malay.jpg',
-        },
-        {
-            title: 'Malay Cuisine',
-            description: 'Savory Malay dishes with rich flavors.',
-            image: 'images/malay.jpg',
-        },
+        // Other food options...
     ];
 
     const beverageOptions = [
@@ -68,42 +59,13 @@ const FoodBeverage = () => {
             title: 'Cold Drinks',
             description: 'Refreshing cold drinks to quench your thirst.',
             image: 'images/cold.jpg',
+            rating: 4,
+            restaurants: [
+                { name: 'Drink Place A', location: 'Location A', lat: 4.2105, lng: 101.9758 },
+                { name: 'Drink Place B', location: 'Location B', lat: 4.2105, lng: 101.9758 },
+            ],
         },
-        {
-            title: 'Hot Drinks',
-            description: 'Warm and comforting hot drinks for any time.',
-            image: 'images/hot.jpg',
-        },
-        {
-            title: 'Hot Drinks',
-            description: 'Warm and comforting hot drinks for any time.',
-            image: 'images/hot.jpg',
-        },
-        {
-            title: 'Hot Drinks',
-            description: 'Warm and comforting hot drinks for any time.',
-            image: 'images/hot.jpg',
-        },
-        {
-            title: 'Hot Drinks',
-            description: 'Warm and comforting hot drinks for any time.',
-            image: 'images/hot.jpg',
-        },
-        {
-            title: 'Hot Drinks',
-            description: 'Warm and comforting hot drinks for any time.',
-            image: 'images/hot.jpg',
-        },
-        {
-            title: 'Hot Drinks',
-            description: 'Warm and comforting hot drinks for any time.',
-            image: 'images/hot.jpg',
-        },
-        {
-            title: 'Hot Drinks',
-            description: 'Warm and comforting hot drinks for any time.',
-            image: 'images/hot.jpg',
-        },
+        // Other beverage options...
     ];
 
     return (
@@ -139,13 +101,15 @@ const FoodBeverage = () => {
                     {foodOptions.map((food) => (
                         <div
                             className="card"
-                            onClick={() => handleCardClick(food.title, food.description)}
+                            onClick={() => handleCardClick(food)}
                             key={food.title}
                         >
                             <img src={food.image} alt={food.title} />
                             <div className="card-description">
                                 <h4>{food.title}</h4>
                                 <p>{food.description}</p>
+                                <StarRating rating={food.rating} />
+                                <p>{food.rating} / 5</p>
                             </div>
                         </div>
                     ))}
@@ -161,13 +125,15 @@ const FoodBeverage = () => {
                     {beverageOptions.map((beverage) => (
                         <div
                             className="card"
-                            onClick={() => handleCardClick(beverage.title, beverage.description)}
+                            onClick={() => handleCardClick(beverage)}
                             key={beverage.title}
                         >
                             <img src={beverage.image} alt={beverage.title} />
                             <div className="card-description">
                                 <h4>{beverage.title}</h4>
                                 <p>{beverage.description}</p>
+                                <StarRating rating={beverage.rating} />
+                                <p>{beverage.rating} / 5</p>
                             </div>
                         </div>
                     ))}
@@ -182,6 +148,22 @@ const FoodBeverage = () => {
                         </span>
                         <h2>{selectedItem.title}</h2>
                         <p>{selectedItem.description}</p>
+                        <h4>Suggested Restaurants:</h4>
+                        <ul>
+                            {selectedItem.restaurants.map((restaurant, index) => (
+                                <li key={index}>
+                                    <span>{restaurant.name} - {restaurant.location}</span>
+                                    <a
+                                        href={`https://www.google.com/maps/search/?api=1&query=${restaurant.lat},${restaurant.lng}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="location-button"
+                                    >
+                                        View on Maps
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             )}
