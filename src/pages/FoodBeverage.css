@@ -3,16 +3,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
     color: #333;
+}
+
+/* Background Image */
+.food-beverage-page {
+    background-image: url('/public/images/penang-bridge.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    min-height: 100vh; /* Minimum height to cover the viewport */
+    display: flex;
+    flex-direction: column; /* Ensure header and content stack vertically */
+    justify-content: flex-start; /* Start content at the top */
 }
 
 /* Header */
 header {
     text-align: center;
-    background: linear-gradient(45deg, #222, #555);
+    background: rgba(34, 34, 34, 0.7); /* Semi-transparent background for better readability */
     color: white;
     padding: 50px 20px;
+    border-radius: 8px;
 }
 
 header h1 {
@@ -34,8 +46,8 @@ header p {
 }
 
 .scroll-button {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 100px;
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -57,37 +69,19 @@ header p {
     transition: transform 0.3s ease;
 }
 
-.scroll-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1; /* Layer above the background but below text */
-    transition: backdrop-filter 0.3s ease;
-}
-
 .scroll-button:hover {
     transform: scale(1.05); /* Slightly enlarge the button on hover */
-}
-
-.scroll-button:hover::after {
-    backdrop-filter: blur(3px); /* Apply blur only to the background overlay */
-}
-
-/* Prevent blur on text */
-.scroll-button:hover h2 {
-    filter: none; /* Ensure the text is not affected by any filter */
-    transform: translateY(-10px); /* Keep the text movement */
 }
 
 /* Section */
 .category {
     padding: 50px 20px;
+    background: rgba(255, 255, 255, 0); /* Solid white background */
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
+/* Section Header */
 .section-header {
     text-align: center;
     margin-bottom: 30px;
@@ -96,11 +90,13 @@ header p {
 .section-header h2 {
     font-size: 2rem;
     color: #000;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add text shadow for better readability */
 }
 
 .section-header p {
     font-size: 1rem;
     color: #666;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add text shadow for better readability */
 }
 
 /* Grid */
@@ -114,42 +110,51 @@ header p {
 /* Cards */
 .card {
     width: 300px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
+    height: 300px; /* Set height for the card */
     border-radius: 8px;
-    text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     cursor: pointer;
-    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack image and description vertically */
+    background: white; /* Solid background for the card */
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    filter: brightness(1.1); /* Brightens card on hover */
-}
-
+/* Adjusted Image Style */
 .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+    width: calc(100% - 20px); /* Image fills card width minus padding */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 60%; /* Limit the height of the image to 60% of the card height */
+    object-fit: cover; /* Maintain aspect ratio of the image */
+    margin: 10px auto; /* Center the image and add space around */
+    border-radius: 8px; /* Match the card's border-radius */
 }
 
-.card h4 {
-    color: #000; /* Black for card titles */
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+/* Card Description */
+.card-description {
+    padding: 10px; /* Space around the description */
+    text-align: center; /* Center text */
+}
+
+/* Text inside cards */
+.card-description h4 {
     margin: 0;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+    color: #000; /* Color for card titles */
 }
 
+.card-description p {
+    margin: 5px 0 0; /* Margin for description text */
+    color: #666; /* Color for description */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-10px); /* Raise the card slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow size */
+}
+
+/* Modal */
 .modal {
     display: flex;
     position: fixed;
@@ -168,9 +173,6 @@ header p {
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 600px; /* Maximum width */
-    border-radius: 8px; /* Rounded corners */
-    text-align: center;
 }
 
 .close {
@@ -186,3 +188,11 @@ header p {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Optional: Responsive design */
+@media (max-width: 600px) {
+    .grid {
+        flex-direction: column; /* Stack cards on smaller screens */
+    }
+}
+

@@ -20,8 +20,39 @@ const FoodBeverage = () => {
         setModalVisible(false);
     };
 
+    const foodOptions = [
+        {
+            title: 'Indian Cuisine',
+            description: 'Delicious Indian dishes with a variety of spices.',
+            image: 'images/indian.jpg',
+        },
+        {
+            title: 'Chinese Cuisine',
+            description: 'Tasty Chinese dishes including noodles and dumplings.',
+            image: 'images/chinese.jpg',
+        },
+        {
+            title: 'Malay Cuisine',
+            description: 'Savory Malay dishes with rich flavors.',
+            image: 'images/malay.jpg',
+        },
+    ];
+
+    const beverageOptions = [
+        {
+            title: 'Cold Drinks',
+            description: 'Refreshing cold drinks to quench your thirst.',
+            image: 'images/cold.jpg',
+        },
+        {
+            title: 'Hot Drinks',
+            description: 'Warm and comforting hot drinks for any time.',
+            image: 'images/hot.jpg',
+        },
+    ];
+
     return (
-        <div>
+        <div className="food-beverage-page">
             <header>
                 <h1>Food & Beverages</h1>
                 <p>Explore a variety of cuisines and drinks!</p>
@@ -50,24 +81,19 @@ const FoodBeverage = () => {
                     <p>Discover a variety of delicious cuisines!</p>
                 </div>
                 <div className="grid">
-                    <div className="card"
-                         style={{ backgroundImage: `url('images/indian.jpg')` }}
-                         onClick={() => handleCardClick('Indian Cuisine', 'Delicious Indian dishes with a variety of spices.')}
-                    >
-                        <h4>Indian Cuisine</h4>
-                    </div>
-                    <div className="card"
-                         style={{ backgroundImage: `url('images/chinese.jpg')` }}
-                         onClick={() => handleCardClick('Chinese Cuisine', 'Tasty Chinese dishes including noodles and dumplings.')}
-                    >
-                        <h4>Chinese Cuisine</h4>
-                    </div>
-                    <div className="card"
-                         style={{ backgroundImage: `url('images/malay.jpg')` }}
-                         onClick={() => handleCardClick('Malay Cuisine', 'Savory Malay dishes with rich flavors.')}
-                    >
-                        <h4>Malay Cuisine</h4>
-                    </div>
+                    {foodOptions.map((food) => (
+                        <div
+                            className="card"
+                            onClick={() => handleCardClick(food.title, food.description)}
+                            key={food.title}
+                        >
+                            <img src={food.image} alt={food.title} />
+                            <div className="card-description">
+                                <h4>{food.title}</h4>
+                                <p>{food.description}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
@@ -77,25 +103,28 @@ const FoodBeverage = () => {
                     <p>Enjoy refreshing drinks for any occasion!</p>
                 </div>
                 <div className="grid">
-                    <div className="card"
-                         style={{ backgroundImage: `url('images/cold.jpg')` }}
-                         onClick={() => handleCardClick('Cold Drinks', 'Refreshing cold drinks to quench your thirst.')}
-                    >
-                        <h4>Cold Drinks</h4>
-                    </div>
-                    <div className="card"
-                         style={{ backgroundImage: `url('images/hot.jpg')` }}
-                         onClick={() => handleCardClick('Hot Drinks', 'Warm and comforting hot drinks for any time.')}
-                    >
-                        <h4>Hot Drinks</h4>
-                    </div>
+                    {beverageOptions.map((beverage) => (
+                        <div
+                            className="card"
+                            onClick={() => handleCardClick(beverage.title, beverage.description)}
+                            key={beverage.title}
+                        >
+                            <img src={beverage.image} alt={beverage.title} />
+                            <div className="card-description">
+                                <h4>{beverage.title}</h4>
+                                <p>{beverage.description}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
             {modalVisible && (
                 <div className="modal">
                     <div className="modal-content">
-                        <span className="close" onClick={closeModal}>&times;</span>
+                        <span className="close" onClick={closeModal}>
+                            &times;
+                        </span>
                         <h2>{selectedItem.title}</h2>
                         <p>{selectedItem.description}</p>
                     </div>
