@@ -127,9 +127,11 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <b>© 2025 Visit Penang Sdn Bhd. All Rights Reserved. </b>
             </section>
 
+            <footer className="arr">
+                <p>© 2025 Visit Penang Sdn Bhd. All Rights Reserved.</p>
+            </footer>
         </Router>
     );
 }
