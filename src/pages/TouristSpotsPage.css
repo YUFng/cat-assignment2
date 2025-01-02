@@ -19,7 +19,7 @@
 
 /* Hero section (Title and description) */
 .tourist-spots-header{
-    position: sticky;
+    position: relative;
     top: 0;
     color: #fff; /* White text */
     padding: 40px 20px; /* Padding inside the hero section */
