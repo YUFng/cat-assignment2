@@ -108,7 +108,7 @@ body {
 /* General footer styles */
 .footer {
   background-color: #101f37;
-  padding: 20px; /* Spacing inside the section */
+  padding: 20px 20px; /* Spacing inside the section */
   text-align: center; /* Center-align content */
   margin-top: 20px;
   border-top: 1px solid #ddd;
@@ -122,9 +122,11 @@ body {
 
 /* Layout container */
 .footer-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal parts */
+  gap: 20px;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: start;
   max-width: 1200px;
   margin: 0 auto;
   text-align: left;
@@ -149,6 +151,7 @@ body {
   margin: 20px;
   flex: 1;
   padding-right: 20px;
+  text-align: center;
 }
 
 .footer-about h2 {
@@ -170,17 +173,23 @@ body {
   margin-top: 20px;
   flex: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center;
 }
 
 .footer-contact h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
   color: #ffffff;
+
 }
 
 .contact-buttons {
   margin: 10px 0;
-  display: flex; /* Arrange buttons horizontally */
+  display: flex;
+  flex-direction: column;
   justify-content: center; /* Center buttons */
   gap: 40px; /* Spacing between buttons */
   flex-wrap: wrap;
@@ -190,6 +199,7 @@ body {
   display: inline-block;
   margin: 5px 10px;
   padding: 10px 15px;
+  width: 150px;
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
@@ -226,37 +236,42 @@ body {
   transform: scale(1.05);
 }
 
-/* Collaborator icons */
-.collaborator-icons h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #ffffff;
+.footer-nav {
+  margin: 20px 0;
+  text-align: center;
 }
 
-.collaborator-icons {
+.footer-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px; /* Space between buttons */
   margin-top: 10px;
 }
 
-.collaborator-icons img {
-  width: 60px;
-  height: 60px;
-  margin: 0 5px;
-  border-radius: 50%; /* Makes icons circular */
-  //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.footer-button {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #101f37;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 200px;
+  transition: background-color 0.3s ease;
 }
 
-.collaborator-icons img:hover {
-  transform: scale(1.1); /* Slightly enlarges the icon */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a stronger shadow */
+.footer-button:hover {
+  color: #cfc22c;
 }
 
 .arr {
   background-color: #101f37; /* Background color for the footer */
   text-align: center; /* Center the text */
-  padding: 20px 0; /* Vertical padding */
+  padding: 10px 0; /* Vertical padding */
   position: relative; /* Positioning context for the footer */
-  bottom: 0; /* Stick to the bottom */
+  bottom: 10px; /* Stick to the bottom */
   width: 100%; /* Full width */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
