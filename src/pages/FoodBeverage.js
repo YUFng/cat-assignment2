@@ -36,6 +36,31 @@ const FoodBeverage = () => {
             description: 'Savory Malay dishes with rich flavors.',
             image: 'images/malay.jpg',
         },
+        {
+            title: 'Malay Cuisine',
+            description: 'Savory Malay dishes with rich flavors.',
+            image: 'images/malay.jpg',
+        },
+        {
+            title: 'Malay Cuisine',
+            description: 'Savory Malay dishes with rich flavors.',
+            image: 'images/malay.jpg',
+        },
+        {
+            title: 'Malay Cuisine',
+            description: 'Savory Malay dishes with rich flavors.',
+            image: 'images/malay.jpg',
+        },
+        {
+            title: 'Malay Cuisine',
+            description: 'Savory Malay dishes with rich flavors.',
+            image: 'images/malay.jpg',
+        },
+        {
+            title: 'Malay Cuisine',
+            description: 'Savory Malay dishes with rich flavors.',
+            image: 'images/malay.jpg',
+        },
     ];
 
     const beverageOptions = [
@@ -43,6 +68,36 @@ const FoodBeverage = () => {
             title: 'Cold Drinks',
             description: 'Refreshing cold drinks to quench your thirst.',
             image: 'images/cold.jpg',
+        },
+        {
+            title: 'Hot Drinks',
+            description: 'Warm and comforting hot drinks for any time.',
+            image: 'images/hot.jpg',
+        },
+        {
+            title: 'Hot Drinks',
+            description: 'Warm and comforting hot drinks for any time.',
+            image: 'images/hot.jpg',
+        },
+        {
+            title: 'Hot Drinks',
+            description: 'Warm and comforting hot drinks for any time.',
+            image: 'images/hot.jpg',
+        },
+        {
+            title: 'Hot Drinks',
+            description: 'Warm and comforting hot drinks for any time.',
+            image: 'images/hot.jpg',
+        },
+        {
+            title: 'Hot Drinks',
+            description: 'Warm and comforting hot drinks for any time.',
+            image: 'images/hot.jpg',
+        },
+        {
+            title: 'Hot Drinks',
+            description: 'Warm and comforting hot drinks for any time.',
+            image: 'images/hot.jpg',
         },
         {
             title: 'Hot Drinks',
