@@ -100,35 +100,18 @@ function App() {
                                 <i className="fas fa-envelope"></i> Email Us
                             </a>
                         </div>
-                        {/* Collaborator Icons */}
-                        <div className="collaborator-icons">
-                            <h3>Collaborator</h3>
-                            <a
-                                href="https://my.trip.com/?locale=en-my"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img src="/images/trip.com icon.png" alt="Collaborator 1"/>
-                            </a>
-                            <a
-                                href="https://www.collaborator2.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img src="collaborator2.png" alt="Collaborator 2"/>
-                            </a>
-                            <a
-                                href="https://www.collaborator3.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img src="collaborator3.png" alt="Collaborator 3"/>
-                            </a>
-                        </div>
+                    </div>
+                    <div className="footer-nav">
+                        <h2>Quick Links</h2>
+                        <nav className="footer-buttons">
+                            <b href="/" className="footer-button">Home</b>
+                            <b href="/tourist-spots" className="footer-button">Tourist Spots</b>
+                            <b href="/foodbeverage" className="footer-button">Food & Beverages</b>
+                            <b href="/hotel" className="footer-button">Hotels</b>
+                        </nav>
                     </div>
                 </div>
             </section>
-
             <footer className="arr">
                 <p>© 2025 Visit Penang Sdn Bhd. All Rights Reserved.</p>
             </footer>
