@@ -80,34 +80,6 @@ function HomePage() {
                     className="info-image"
                 />
             </section>
-
-            <section className="contact-us">
-                <h2>Contact Us</h2>
-                <div className="contact-buttons">
-                    <a
-                        href="https://www.facebook.com/share/155fzxVVqE/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="contact-button facebook-button"
-                    >
-                        Facebook
-                    </a>
-                    <a
-                        href="https://www.instagram.com/penang.visit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="contact-button instagram-button"
-                    >
-                        Instagram
-                    </a>
-                    <a
-                        href="mailto:info@visitpenang.com"
-                        className="contact-button info-button"
-                    >
-                        Email Us
-                    </a>
-                </div>
-            </section>
         </div>
     );
 }

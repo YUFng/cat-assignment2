@@ -15,18 +15,18 @@
 .hotels-header {
     margin-bottom: 0px; /* Increased bottom margin */
     font-family: Arial, sans-serif;
-    color: #222; /* Slightly darker color for better readability */
+    background: linear-gradient(45deg, #222, #555);
 }
 
 .hotels-header h1 {
     font-size: 2em; /* Increased font size */
     margin-bottom: 15px; /* Increased bottom margin */
-    color: #111; /* Strong dark color for headers */
+    color: #ffffff; /* Strong dark color for headers */
 }
 
 .hotels-header p {
     font-size: 1.3em; /* Increased font size */
-    color: #555; /* Medium contrast color for paragraphs */
+    color: #ffffff; /* Medium contrast color for paragraphs */
 }
 
 /* Style the search bar */

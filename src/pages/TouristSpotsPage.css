@@ -1,5 +1,5 @@
 .tourist-spots-page {
-    padding: 0px;
+    padding: 0;
     text-align: center;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -19,7 +19,7 @@
 
 /* Hero section (Title and description) */
 .tourist-spots-header{
-    position: sticky;
+    position: relative;
     top: 0;
     color: #fff; /* White text */
     padding: 40px 20px; /* Padding inside the hero section */
@@ -28,11 +28,7 @@
     border-bottom: 4px solid #222;
     animation: fade-in 1s ease-in-out;
     box-sizing: border-box;
-    background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)
-    );
+    background: linear-gradient(45deg, #222, #555);
     z-index: 10;
 }
 
