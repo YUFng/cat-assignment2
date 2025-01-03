@@ -30,7 +30,7 @@ body {
   border: none;
   justify-content: space-between;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .toolbar-content {
@@ -49,7 +49,6 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  margin-right: 10px;
 }
 
 .logo-image {
@@ -61,7 +60,7 @@ body {
 .toolbar-nav {
   display: flex;
   align-items: center;
-  gap: 15px; /* Adds space between buttons */
+  gap: 60px; /* Adds space between buttons */
 }
 
 .toolbar-button {
@@ -278,14 +277,23 @@ body {
 
 /* Adjust for smaller screens */
 @media (max-width: 768px) {
-  .toolbar-nav {
-    margin-top: 10px; /* Add space between logo and buttons in column layout */
-    padding-bottom: 5px;
-    margin-left: -10px;
-    gap: 10px; /* Adjust gap for mobile */
+  .toolbar{
+    padding: 0;
   }
+  .app-logo {
+    margin-right: 10px;
+    margin-left: -10px;
+  }
+  .toolbar-nav {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px; /* Adds space between buttons */
+  }
+
   .toolbar-button {
     margin: 0 5px;
+    padding: 10px 15px; /* Slightly larger buttons for touch devices */
   }
 
   .footer-container {
