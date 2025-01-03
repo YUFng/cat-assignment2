@@ -49,6 +49,7 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
+  margin-right: 10px;
 }
 
 .logo-image {
@@ -66,7 +67,7 @@ body {
 .toolbar-button {
   margin: 0 20px;
   font-size: 1rem;
-  padding: 10px 15px;
+  padding: 8px 12px;
   background-color: white; /* Buttons have a white background */
   color: #00796b; /* Text matches the toolbar background */
   text-decoration: none;
@@ -180,7 +181,7 @@ body {
 
 .footer-contact h2 {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   color: #ffffff;
 
 }
@@ -190,7 +191,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center buttons */
-  gap: 40px; /* Spacing between buttons */
+  gap: 25px; /* Spacing between buttons */
   flex-wrap: wrap;
 }
 
@@ -277,15 +278,22 @@ body {
 
 /* Adjust for smaller screens */
 @media (max-width: 768px) {
-  .toolbar-button {
-    margin: 0 10px; /* Reduce spacing for smaller screens */
+  .toolbar-nav {
+    margin-top: 10px; /* Add space between logo and buttons in column layout */
+    padding-bottom: 5px;
+    margin-left: -10px;
+    gap: 10px; /* Adjust gap for mobile */
   }
+  .toolbar-button {
+    margin: 0 5px;
+  }
+
   .footer-container {
     flex-direction: column;
     text-align: center;
   }
-
   .footer-about, .footer-contact {
     padding: 10px 0;
   }
+
 }
