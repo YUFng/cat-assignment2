@@ -55,20 +55,15 @@ const TouristSpotsPage = () => {
     ];
 
     return (
-        <div
-            className="tourist-spots-page"
-            style={{
-                backgroundImage: `url(${"./images/penang-bridge.jpg"})`,
-                backgroundSize: "cover",
-                backgroundColor: "#f9f9f9",
-                backgroundPosition: "center",
-                minHeight: "100vh",
-                minWidth: "100vw",
-                color: "#fff",
-            }}
-        >
-            <h1>Tourist Spots in Penang</h1>
-            <div className="tourist-spots-container">
+        <div className="tourist-spots-page">
+            <header className="tourist-spots-header">
+                <h1>Tourist Spots of Penang</h1>
+                <p>
+                    Discover the best attractions in Penang, from cultural landmarks to
+                    breathtaking hills and temples. Plan your visit with our curated list of top spots.
+                </p>
+            </header>
+            <div className="tourist-spots-list">
                 {places.map((place, index) => (
                     <TouristSpotsCard
                         key={index}
@@ -77,6 +72,7 @@ const TouristSpotsPage = () => {
                         image={place.image}
                         mapLink={place.mapLink}
                         rating={place.rating}
+                        style={{ animationDelay: `${index * 0.2}s` }}
                     />
                 ))}
             </div>

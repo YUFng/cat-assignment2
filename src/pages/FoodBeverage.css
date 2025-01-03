@@ -1,30 +1,25 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 80px auto 0;
     padding: 0;
+    background: #f4f4f4;
     color: #333;
-}
-
-/* Background Image */
-.food-beverage-page {
-    background-image: url('/public/images/penang-bridge.jpg'); /* Background image */
-    background-size: cover; /* Cover the entire page */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the background image */
-    min-height: 100vh; /* Minimum height to cover the viewport */
-    display: flex;
-    flex-direction: column; /* Ensure header and content stack vertically */
-    justify-content: flex-start; /* Start content at the top */
 }
 
 /* Header */
 header {
+    position: relative;
+    top: 0;
+    color: #fff; /* White text */
+    padding: 40px 20px; /* Padding inside the hero section */
     text-align: center;
-    background: rgba(34, 34, 34, 0);
-    color: white;
-    border-radius: 8px;
-    padding-top: 110px;
+    width: 100%;
+    border-bottom: 4px solid #222;
+    animation: fade-in 1s ease-in-out;
+    box-sizing: border-box;
+    background: linear-gradient(45deg, #222, #555);
+    z-index: 10;
 }
 
 header h1 {
@@ -41,13 +36,13 @@ header p {
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 70px;
+    gap: 30px;
     margin: 30px 0;
 }
 
 .scroll-button {
-    width: 400px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -61,29 +56,45 @@ header p {
 }
 
 .scroll-button h2 {
-    position: absolute; /* Position text absolutely */
-    bottom: 10px; /* Position it at the bottom */
-    left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
-    z-index: 2; /* Keep text above background */
-    color: white; /* White text for button labels */
+    color: white;
     font-size: 1.5rem;
-    transition: transform 0.3s ease-in-out; /* Smooth transition for movement */
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2; /* Ensure text stays above background */
+    transition: transform 0.3s ease;
 }
 
+.scroll-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1; /* Layer above the background but below text */
+    transition: backdrop-filter 0.3s ease;
+}
+
+.scroll-button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.scroll-button:hover::after {
+    backdrop-filter: blur(3px); /* Apply blur only to the background overlay */
+}
+
+/* Prevent blur on text */
 .scroll-button:hover h2 {
-    transform: translate(-50%, -10px); /* Raise text upwards */
+    filter: none; /* Ensure the text is not affected by any filter */
+    transform: translateY(-10px); /* Keep the text movement */
 }
 
 /* Section */
 .category {
     padding: 50px 20px;
-    background: rgba(255, 255, 255, 0); /* Solid white background */
-    border-radius: 8px;
-    margin: 20px 0;
 }
 
-/* Section Header */
 .section-header {
     text-align: center;
     margin-bottom: 30px;
@@ -92,13 +103,11 @@ header p {
 .section-header h2 {
     font-size: 2rem;
     color: #000;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add text shadow for better readability */
 }
 
 .section-header p {
     font-size: 1rem;
     color: #666;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add text shadow for better readability */
 }
 
 /* Grid */
@@ -111,52 +120,43 @@ header p {
 
 /* Cards */
 .card {
-    width: 350px;
-    height: 450px; /* Set height for the card */
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
     border-radius: 8px;
+    text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     overflow: hidden;
     cursor: pointer;
-    display: flex;
-    flex-direction: column; /* Stack image and description vertically */
-    background: white; /* Solid background for the card */
+    position: relative;
 }
 
-/* Adjusted Image Style */
-.card img {
-    width: calc(100% - 20px); /* Image fills card width minus padding */
-    height: calc(100% - 0px); /* Maintain aspect ratio */
-    max-height: 60%; /* Limit the height of the image to 60% of the card height */
-    object-fit: cover; /* Maintain aspect ratio of the image */
-    margin: 10px auto; /* Center the image and add space around */
-    border-radius: 8px; /* Match the card's border-radius */
-}
-
-/* Card Description */
-.card-description {
-    padding: 10px; /* Space around the description */
-    text-align: center; /* Center text */
-}
-
-/* Text inside cards */
-.card-description h4 {
-    margin: 0;
-    color: #000; /* Color for card titles */
-}
-
-.card-description p {
-    margin: 5px 0 0; /* Margin for description text */
-    color: #666; /* Color for description */
-}
-
-/* Card Hover Effect */
 .card:hover {
-    transform: translateY(-10px); /* Raise the card slightly */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow size */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1); /* Brightens card on hover */
 }
 
-/* Modal */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h4 {
+    color: #000; /* Black for card titles */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 .modal {
     display: flex;
     position: fixed;
@@ -164,91 +164,21 @@ header p {
     left: 0;
     top: 0;
     width: 100%; /* Full width */
-    height: 110%; /* Full height */
+    height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
 }
 
 .modal-content {
-    color: #111111;
     background-color: #fefefe;
-    margin: 12% auto; /* 15% from the top and centered */
+    margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #999;
-    width: 70%; /* Could be more or less, depending on screen size */
-}
-
-/* Modal Styles */
-.modal-content h4 {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #111111;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-}
-
-.restaurant-list {
-    list-style: none;
-    gap: 10px;
-    padding: 10px;
-    margin-top: 5px;
-    margin-left: 160px;
-    /*margin: 20px 100px 100px;*/
-}
-
-.restaurant-item {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f9f9f9;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.restaurant-info h5 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.restaurant-info p {
-    margin: 5px 0 0;
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.location-button {
-    display: inline-block;
-    padding: 8px 15px;
-    font-size: 0.9rem;
-    color: white;
-    background: #dddddd;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Maximum width */
+    border-radius: 8px; /* Rounded corners */
     text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
-.location-button:hover {
-    background: #cccccc;
-    transform: scale(1.05);
-}
-
-/* New Styles for Restaurant List */
-.location-button {
-    margin-left: 10px;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 
 .close {
     color: #aaa;
@@ -263,23 +193,3 @@ header p {
     text-decoration: none;
     cursor: pointer;
 }
-
-/* Optional: Responsive design */
-@media (max-width: 600px) {
-    .grid {
-        flex-direction: column; /* Stack cards on smaller screens */
-    }
-}
-
-.star-rating {
-    display: flex;
-    justify-content: center;
-    margin: 5px 0;
-}
-
-.star {
-    font-size: 1.2rem;
-    color: gold;
-    margin: 0 2px;
-}
-

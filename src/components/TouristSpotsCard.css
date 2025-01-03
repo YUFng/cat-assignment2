@@ -13,7 +13,10 @@
     background-color: #fff; /* White background for better contrast */
     display: flex;
     flex-direction: column; /* Keep content aligned vertically */
-    justify-content: space-between; /* Space out the content */
+    justify-content: space-between;
+    animation: slide-up 0.8s ease-in-out; /* Slide-up for cards */
+    animation-delay: 0.2s; /* Optional: Stagger animation slightly for each card */
+    animation-fill-mode: both;
 }
 
 /* Hover effect for cards */

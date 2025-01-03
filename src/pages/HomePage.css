@@ -72,7 +72,7 @@
 /* Info Section */
 .info-section {
     padding: 30px 20px;
-    background-color: #757474;
+    background: linear-gradient(45deg, #222, #555);
     opacity: 0.9;
 }
 
@@ -108,66 +108,3 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact Us Section Styling */
-.contact-us {
-    background-color: #ffffff; /* Light background for the section */
-    padding: 40px 20px; /* Spacing inside the section */
-    text-align: center; /* Center-align content */
-    margin-top: 20px;
-    border-top: 1px solid #ddd; /* Add a light top border for separation */
-}
-
-.contact-us h2 {
-    font-size: 2rem; /* Larger, prominent heading */
-    margin-bottom: 20px;
-    color: #333; /* Neutral heading color */
-}
-
-/* Button Style for Facebook, Instagram, Email */
-.contact-buttons {
-    display: flex; /* Arrange buttons horizontally */
-    justify-content: center; /* Center buttons */
-    gap: 40px; /* Spacing between buttons */
-    flex-wrap: wrap; /* Allow wrapping if screen is too small */
-}
-
-.contact-button {
-    text-decoration: none; /* Remove underline */
-    font-size: 1.1rem;
-    padding: 10px 15px; /* Button padding */
-    border: none; /* Remove borders */
-    border-radius: 5px; /* Rounded corners */
-    font-weight: bold; /* Make text bold */
-    color: white; /* Button text color */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transitions */
-}
-
-/* Facebook Button Styling */
-.facebook-button {
-    background-color: #3b5998; /* Facebook blue */
-}
-
-.facebook-button:hover {
-    background-color: #2796d1;
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-/* Instagram Button Styling */
-.instagram-button {
-    background-color: #f33bff; /* Instagram red-pink */
-}
-
-.instagram-button:hover {
-    background-color: #542da5;
-    transform: scale(1.05);
-}
-
-/* Info/Email Button Styling */
-.info-button {
-    background-color: #4CAF50; /* Green for email/info */
-}
-
-.info-button:hover {
-    background-color: #204720;
-    transform: scale(1.05);
-}
