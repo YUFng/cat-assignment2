@@ -46,9 +46,18 @@ const FoodBeverage = () => {
             description: 'This is one of the food experiences...',
             image: 'images/indian.jpg',
             restaurants: [
-                { name: 'Restaurant A', location: 'George Town', lat: 5.4141, lng: 100.3288, rating: 4.5 },
-                { name: 'Restaurant B', location: 'Batu Ferringhi', lat: 5.4653, lng: 100.2926, rating: 4.2 },
-                { name: 'Restaurant B', location: 'Batu Ferringhi', lat: 5.4653, lng: 100.2926, rating: 4.2 },
+                {
+                    name: 'Restaurant A',
+                    location: 'George Town',
+                    url: 'https://www.google.com/maps/place/Shariff+Nasi+Kandar/@5.3720526,100.2995885,16.75z/data=!4m6!3m5!1s0x304ac19f08eccec1:0x3f2f726f7fc0b409!8m2!3d5.3717645!4d100.3013492!16s%2Fg%2F11bccgkj2z?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D',
+                    rating: 4.4,
+                },
+                {
+                    name: 'Restaurant B',
+                    location: 'Batu Ferringhi',
+                    url: 'https://maps.example.com/restaurant-b',
+                    rating: 4.2,
+                },
             ],
         },
         // Other food options...
@@ -60,9 +69,18 @@ const FoodBeverage = () => {
             description: 'Refreshing cold drinks...',
             image: 'images/cold.jpg',
             restaurants: [
-                { name: 'Drink Place A', location: 'Location A', lat: 4.2105, lng: 101.9758, rating: 4.0 },
-                { name: 'Drink Place B', location: 'Location B', lat: 4.2105, lng: 101.9758, rating: 3.8 },
-                { name: 'Drink Place B', location: 'Location B', lat: 4.2105, lng: 101.9758, rating: 3.8 },
+                {
+                    name: 'Drink Place A',
+                    location: 'Location A',
+                    url: 'https://maps.example.com/drink-place-a',
+                    rating: 4.0,
+                },
+                {
+                    name: 'Drink Place B',
+                    location: 'Location B',
+                    url: 'https://maps.example.com/drink-place-b',
+                    rating: 3.8,
+                },
             ],
         },
         // Other beverage options...
@@ -152,7 +170,7 @@ const FoodBeverage = () => {
                                         <StarRating rating={restaurant.rating} />
                                     </div>
                                     <a
-                                        href={`https://www.google.com/maps/search/?api=1&query=${restaurant.lat},${restaurant.lng}`}
+                                        href={restaurant.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="location-button"
