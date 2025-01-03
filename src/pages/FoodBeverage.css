@@ -111,8 +111,8 @@ header p {
 
 /* Cards */
 .card {
-    width: 300px;
-    height: 700px; /* Set height for the card */
+    width: 350px;
+    height: 450px; /* Set height for the card */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -164,18 +164,91 @@ header p {
     left: 0;
     top: 0;
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    height: 110%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
 }
 
 .modal-content {
+    color: #111111;
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 12% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    border: 1px solid #999;
+    width: 70%; /* Could be more or less, depending on screen size */
 }
+
+/* Modal Styles */
+.modal-content h4 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #111111;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.restaurant-list {
+    list-style: none;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 160px;
+    /*margin: 20px 100px 100px;*/
+}
+
+.restaurant-item {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-info h5 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.restaurant-info p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.location-button {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: white;
+    background: #dddddd;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.location-button:hover {
+    background: #cccccc;
+    transform: scale(1.05);
+}
+
+/* New Styles for Restaurant List */
+.location-button {
+    margin-left: 10px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 .close {
     color: #aaa;
@@ -210,10 +283,3 @@ header p {
     margin: 0 2px;
 }
 
-/* New Styles for Restaurant List */
-.location-button {
-    margin-left: 10px;
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-}
