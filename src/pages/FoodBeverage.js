@@ -254,7 +254,7 @@ const FoodBeverage = () => {
         <div className="food-beverage-page">
             <header>
                 <h1>Food & Beverages</h1>
-                <p>Explore a variety of cuisines and drinks!</p>
+                <p>From savory to sweet, our food and drink options cater to every craving!</p>
             </header>
 
             <div className="button-container">

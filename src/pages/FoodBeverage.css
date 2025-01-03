@@ -112,7 +112,7 @@ header p {
     border-radius: 10px; /* Rounded corners */
     padding: 15px; /* Space inside the card */
     text-align: center; /* Center-align the card content */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     width: 400px; /* Fixed width for the card */
     height: 500px; /* Fixed height for the card */
     overflow: hidden;
@@ -209,6 +209,7 @@ header p {
 }
 
 .restaurant-item {
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -240,16 +241,6 @@ header p {
     margin-right: 2px;
 }
 
-/* Close Button */
-.modal .close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #333;
-}
-
 /* Location Button */
 .location-button {
     background-color: #007bff;
@@ -263,4 +254,35 @@ header p {
 
 .location-button:hover {
     background-color: #0056b3;
+}
+
+/* Close Button */
+.modal .close{
+    background: #333;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover effect for close button */
+.modal .close:hover {
+    background: #555;
+    transform: rotate(90deg); /* Adds a playful effect */
+}
+
+/* Close button (Cancel) icon hover effect */
+.modal .close:focus {
+    outline: none;
 }
