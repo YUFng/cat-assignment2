@@ -1,38 +1,110 @@
 import React, { useState } from 'react';
-import HotelsList from '../components/HotelsList';
 import './HotelsPage.css';
 
 const hotelsData = [
     {
-        name: 'Grand Plaza',
+        name: 'Eastern & Oriental Hotel',
         location: 'City Center',
         rating: 4.5,
         image: '/images/hotel1.jpg',
-        description: 'Experience luxury and comfort in the heart of the city. Grand Plaza offers top-notch amenities and exceptional service.',
+        description: 'Experience luxury and comfort in the heart of the city. Eastern & Oriental Hotel offers top-notch amenities and exceptional service.',
         priceRange: '$$$',
         reviews: ['Amazing service!', 'Very clean and comfortable.', 'Perfect location for exploring the city.'],
+        bookingLink: 'https://www.example.com/grand-plaza'
     },
     {
-        name: 'Seaside Inn',
+        name: 'Hotel Mercure Beachfront',
         location: 'Beachfront',
         rating: 4.2,
         image: '/images/hotel2.jpg',
-        description: 'Wake up to the sound of waves at Seaside Inn. Perfect for beach lovers looking for a relaxing getaway.',
+        description: 'Wake up to the sound of waves at Hotel Mercure. Perfect for beach lovers looking for a relaxing getaway.',
         priceRange: '$$',
         reviews: ['Lovely beachfront views.', 'Cozy rooms.', 'Great value for money.'],
+        bookingLink: 'https://www.example.com/seaside-inn'
     },
     {
-        name: 'Mountain Retreat',
+        name: 'Hickory Penang Hill',
         location: 'Highlands',
         rating: 4.7,
         image: '/images/hotel3.jpg',
-        description: 'Nestled in the highlands, Mountain Retreat offers a tranquil escape with breathtaking views.',
+        description: 'Nestled in the highlands, Hickory offers a tranquil escape with breathtaking views.',
         priceRange: '$$$$',
         reviews: ['Breathtaking scenery!', 'The perfect place to unwind.', 'Exceptional service and food.'],
+        bookingLink: 'https://www.example.com/mountain-retreat'
+    },
+    {
+        name: 'Lexis Suites Penang',
+        location: 'Beachfront',
+        rating: 4.8,
+        image: '/images/hotel4.jpg',
+        description: 'Unwind at Lexis Suites, offering serene surroundings and charming accommodations.',
+        priceRange: '$$$',
+        reviews: ['Peaceful and quiet.', 'Lovely views!', 'Highly recommended for families.'],
+        bookingLink: 'https://www.example.com/lakeside-haven'
+    },
+    {
+        name: 'Hotel Neo+ Penang',
+        location: 'City Center',
+        rating: 4.6,
+        image: '/images/hotel5.jpg',
+        description: 'A modern retreat in the heart of the bustling city. Hotel Neo+ combines style and comfort.',
+        priceRange: '$$$',
+        reviews: ['Amazing design!', 'Very convenient location.', 'Great for business trips.'],
+        bookingLink: 'https://www.example.com/urban-oasis'
+    },
+    {
+        name: 'Hard Rock Hotel Penang',
+        location: 'Beachfront',
+        rating: 4.3,
+        image: '/images/hotel6.jpg',
+        description: 'Enjoy the breathtaking coastal views and sandy beaches at Hard Rock Hotel.',
+        priceRange: '$$',
+        reviews: ['Beautiful sunsets!', 'Rooms could be bigger.', 'Great food and drinks.'],
+        bookingLink: 'https://www.example.com/coastal-bliss'
+    },
+    {
+        name: 'Eastin Hotel',
+        location: 'Downtown',
+        rating: 4.9,
+        image: '/images/hotel7.jpg',
+        description: 'Step back in time with a stay at Eastin Hotel, offering classic elegance and modern amenities.',
+        priceRange: '$$$$',
+        reviews: ['Absolutely stunning!', 'Feels like living in history.', 'Wonderful staff.'],
+        bookingLink: 'https://www.example.com/heritage-inn'
+    },
+    {
+        name: 'Nature Fruit Farm Hotel',
+        location: 'Forest Reserve',
+        rating: 4.4,
+        image: '/images/hotel8.jpg',
+        description: 'Reconnect with nature at Nature Fruit Farm Hotel, surrounded by lush greenery and tranquil views.',
+        priceRange: '$$$',
+        reviews: ['Very relaxing stay.', 'Lots of outdoor activities.', 'Perfect for nature lovers.'],
+        bookingLink: 'https://www.example.com/natures-retreat'
+    },
+    {
+        name: 'Flamingo Hotel by the Beach',
+        location: 'Beachfront',
+        rating: 4.7,
+        image: '/images/hotel9.jpg',
+        description: 'Stay in style at Flamingo Hotel by the Beach, featuring panoramic views and top-tier amenities.',
+        priceRange: '$$$$',
+        reviews: ['Amazing views!', 'Luxury at its best.', 'Perfect for a romantic getaway.'],
+        bookingLink: 'https://www.example.com/skyline-suites'
+    },
+    {
+        name: 'Bayview Hotel Georgetown',
+        location: 'City Center',
+        rating: 4.5,
+        image: '/images/hotel10.jpg',
+        description: 'Discover the beauty of the desert at Bayview Hotel Georgetown, offering luxury and adventure.',
+        priceRange: '$$$',
+        reviews: ['Unique experience!', 'Great service.', 'The desert safari was a highlight.'],
+        bookingLink: 'https://www.example.com/desert-pearl-resort'
     },
 ];
 
-// Helper function to convert rating to stars
+
 const getStars = (rating) => {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 >= 0.5 ? 1 : 0;
@@ -49,11 +121,18 @@ const getStars = (rating) => {
 
 function HotelsPage() {
     const [filter, setFilter] = useState('');
+    const [selectedHotel, setSelectedHotel] = useState(null);
 
     const filteredHotels = hotelsData.filter((hotel) =>
         hotel.name.toLowerCase().includes(filter.toLowerCase()) ||
         hotel.location.toLowerCase().includes(filter.toLowerCase())
     );
+
+    const truncateDescription = (description, length = 100) => {
+        return description.length > length
+            ? `${description.substring(0, length)}...`
+            : description;
+    };
 
     return (
         <div className="hotels-page">
@@ -70,23 +149,43 @@ function HotelsPage() {
             </header>
             <div className="hotels-list">
                 {filteredHotels.map((hotel, index) => (
-                    <div key={index} className="hotel-card">
+                    <div
+                        key={index}
+                        className="hotel-card"
+                        onClick={() => setSelectedHotel(hotel)}
+                    >
                         <img src={hotel.image} alt={hotel.name} className="hotel-image" />
                         <h2>{hotel.name}</h2>
                         <p>{hotel.location}</p>
                         <div className="hotel-rating">{getStars(hotel.rating)}</div>
-                        <p>{hotel.description}</p>
-                        <div className="hotel-reviews">
-                            <h3>Reviews</h3>
-                            <ul>
-                                {hotel.reviews.map((review, idx) => (
-                                    <li key={idx}>&quot;{review}&quot;</li>
-                                ))}
-                            </ul>
-                        </div>
+                        <p>{truncateDescription(hotel.description)}</p>
                     </div>
                 ))}
             </div>
+            {selectedHotel && (
+                <div className="hotel-modal">
+                    <div className="modal-content">
+                        <button className="close-modal" onClick={() => setSelectedHotel(null)}>×</button>
+                        <img src={selectedHotel.image} alt={selectedHotel.name} className="modal-image" />
+                        <h2>{selectedHotel.name}</h2>
+                        <p>{selectedHotel.location}</p>
+                        <div className="hotel-rating">{getStars(selectedHotel.rating)}</div>
+                        <p>{selectedHotel.description}</p>
+                        <h3>Reviews</h3>
+                        <ul>
+                            {selectedHotel.reviews.map((review, idx) => (
+                                <li key={idx}>&quot;{review}&quot;</li>
+                            ))}
+                        </ul>
+                        <button
+                            className="booking-button"
+                            onClick={() => window.open(selectedHotel.bookingLink, '_blank')}
+                        >
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

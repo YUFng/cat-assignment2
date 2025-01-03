@@ -5,22 +5,22 @@
 }
 
 .hero-section h2 {
-    font-size: 5rem; /* Large text */
+    font-size: 5rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for readability */
-    opacity: 0.9; /* Slight transparency */
-    margin-bottom: 20px; /* Space between heading and paragraph */
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9);
+    opacity: 0.9;
+    margin-bottom: 20px;
 }
 
 .hero-section p {
-    font-size: 2rem; /* Larger paragraph text */
-    line-height: 1.8; /* Comfortable line spacing */
-    color: rgba(255, 255, 255, 0.9); /* More transparent for secondary text */
-    max-width: 800px; /* Restrict width for better readability */
-    text-align: center; /* Center align the content */
-    margin: 0 auto; /* Center the paragraph */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
+    line-height: 1.8;
+    color: rgb(255, 255, 255);
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
 }
 
 /* Gallery Section */
