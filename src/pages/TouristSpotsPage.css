@@ -29,7 +29,6 @@
     animation: fade-in 1s ease-in-out;
     box-sizing: border-box;
     background: linear-gradient(45deg, #222, #555);
-    z-index: 10;
 }
 
 .tourist-spots-header h1 {
@@ -144,9 +143,10 @@
 
     /* Card Adjustments: Slightly narrower cards on mobile */
     .tourist-spots-card {
-        width: 90%; /* Adjust width to fit smaller screens */
+        width: 90%;
         padding: 20px;
     }
+
 
     /* Card titles become smaller for mobile */
     .tourist-spots-card h2 {
