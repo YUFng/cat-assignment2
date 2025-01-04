@@ -422,6 +422,7 @@ body {
   }
 
   .back-to-top {
+    right: 2.2rem;
     padding: 10px; /* Smaller padding for mobile */
     font-size: 30px; /* Smaller font size for mobile */
   }
