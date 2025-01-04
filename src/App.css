@@ -423,4 +423,10 @@ body {
     font-size: 0.75rem; /* Slightly smaller text for mobile */
   }
 
+  .back-to-top {
+    bottom: 20px; /* Adjust position as needed */
+    right: 15px; /* Adjust position as needed */
+    padding: 10px; /* Smaller padding for mobile */
+    font-size: 30px; /* Smaller font size for mobile */
+  }
 }
