@@ -7,6 +7,12 @@ import FoodBeverage from "./pages/FoodBeverage";
 import "./App.css"; // Ensure you import your CSS file for styling.
 
 function App() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     const [isVisible, setIsVisible] = useState(false);
 
     const scrollToTop = () => {
@@ -34,13 +40,17 @@ function App() {
                     <a href="/" className="app-logo">
                         <img src="/images/logo.png" alt="Discover Penang Logo" className="logo-image"/>
                     </a>
-                    <nav className="toolbar-nav">
-                        <a href="/" className="toolbar-button">Home</a>
-                        <a href="/tourist-spots" className="toolbar-button">Tourist Spots</a>
-                        <a href="/foodbeverage" className="toolbar-button">Food & Beverages</a>
-                        <a href="/hotel" className="toolbar-button">Hotels</a>
-                    </nav>
+                    {/* Mobile Menu Button */}
+                    <button className="menu-button" onClick={toggleMenu}>
+                        <span className="menu-icon">&#9776;</span> {/* Hamburger icon */}
+                    </button>
                 </div>
+                <nav className={`toolbar-nav ${menuOpen ? "open" : ""}`}>
+                    <a href="/" className="toolbar-button">Home</a>
+                    <a href="/tourist-spots" className="toolbar-button">Tourist Spots</a>
+                    <a href="/foodbeverage" className="toolbar-button">Food & Beverages</a>
+                    <a href="/hotel" className="toolbar-button">Hotels</a>
+                </nav>
             </header>
             <div>
                 <Routes>
