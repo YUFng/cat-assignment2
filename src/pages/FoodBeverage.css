@@ -15,16 +15,15 @@ body {
 /* Header Section */
 header {
     position: relative;
-    top: 10px;
     color: #fff; /* White text */
     padding: 40px 20px; /* Padding inside the hero section */
     text-align: center;
-    width: 100%;
     border-bottom: 4px solid #222;
     animation: fade-in 1s ease-in-out;
     box-sizing: border-box;
     background: linear-gradient(45deg, #222, #555);
     z-index: 10;
+    width: 1500px;
 }
 
 header h1 {
