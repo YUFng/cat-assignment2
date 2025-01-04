@@ -95,15 +95,19 @@
 
 .hotel-image {
     width: 100%;
-    max-height: 250px; /* Increased max height */
+    max-height: 275px; /* Increased max height */
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
 .hotel-card:hover .hotel-image {
-    transform: scale(1.1); /* Zooms in the image more */
+    transform: scale(1.05); /* Slightly reduce zoom effect */
+    z-index: 1; /* Ensure it stays above other elements but doesn't block text */
+    position: relative; /* Keeps the image's hover effect confined */
+    overflow: hidden; /* Prevents scaled image from affecting layout */
 }
+
 
 /* Modal Styles */
 .hotel-modal {
@@ -163,7 +167,7 @@
     border-radius: 5px;
     font-size: 1.2em; /* Slightly larger font size */
     cursor: pointer;
-    margin-top: 20px; /* Space above the button */
+    margin-top: 2px; /* Space above the button */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -175,4 +179,52 @@
 .booking-button:active {
     transform: translateY(0); /* Button returns to normal on click */
     background-color: #003f7f; /* Even darker blue on click */
+}
+
+.button-group {
+    display: flex; /* Arrange buttons in a row */
+    justify-content: center; /* Center all buttons together */
+    align-items: center; /* Vertically align buttons */
+    gap: 1rem; /* Add equal spacing between buttons */
+    margin-top: 1.5rem; /* Add spacing above the group */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.booking-button,
+.attractions-button,
+.eats-button {
+    padding: 0.8rem 1.2rem; /* Uniform padding for all buttons */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Consistent font size */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    width: 30%; /* Ensure all buttons have the same width */
+    max-width: 150px; /* Optional: Restrict the maximum width */
+    text-align: center; /* Center text inside the buttons */
+}
+
+.booking-button {
+    order: 1;
+    background-color: #4caf50;
+    color: white;
+}
+
+.attractions-button {
+    order: 0;
+    background-color: #2196f3;
+    color: white;
+}
+
+.eats-button {
+    order: 2;
+    background-color: #ff5722;
+    color: white;
+}
+
+.booking-button:hover,
+.attractions-button:hover,
+.eats-button:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    filter: brightness(1.1); /* Brighten the button on hover */
 }
