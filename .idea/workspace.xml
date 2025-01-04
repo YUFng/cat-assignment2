@@ -18,10 +18,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/blah" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="blah" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,26 +65,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.FoodBeverage.html.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.FoodBeverage.js.executor&quot;: &quot;Debug&quot;,
-    &quot;Node.js.HomePage.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.TouristSpotCard.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.TouristSpotsPage.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/OneDrive - Universiti Sains Malaysia/Desktop/USM Y2S1/CAT 201/CAT Assignment 1/cat-assignment2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.FoodBeverage.html.executor": "Debug",
+    "Node.js.FoodBeverage.js.executor": "Debug",
+    "Node.js.HomePage.js.executor": "Run",
+    "Node.js.TouristSpotCard.js.executor": "Run",
+    "Node.js.TouristSpotsPage.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "blah",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/OneDrive - Universiti Sains Malaysia/Desktop/USM Y2S1/CAT 201/CAT Assignment 1/cat-assignment2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Users\\User\\OneDrive - Universiti Sains Malaysia\\Desktop\\USM Y2S1\\CAT 201\\IntelliJ IDEA 2024.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="FoodBeverage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cat-assignment2/src/pages/FoodBeverage.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -178,7 +183,39 @@
       <option name="project" value="LOCAL" />
       <updated>1735724228420</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="pavi commit">
+      <option name="closed" value="true" />
+      <created>1735903152691</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735903152691</updated>
+    </task>
+    <task id="LOCAL-00009" summary="pavi commit">
+      <option name="closed" value="true" />
+      <created>1735934333894</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735934333894</updated>
+    </task>
+    <task id="LOCAL-00010" summary="pavi commit">
+      <option name="closed" value="true" />
+      <created>1735934513706</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1735934513706</updated>
+    </task>
+    <task id="LOCAL-00011" summary="pavi commit">
+      <option name="closed" value="true" />
+      <created>1735935392983</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1735935392983</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
