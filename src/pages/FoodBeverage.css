@@ -1,16 +1,21 @@
-/* General Styles */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    margin: 80px auto 0;
+    margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background-color: #f8f9fa;
     color: #333;
 }
 
-/* Header */
+.food-beverage-page {
+    text-align: center;
+    padding: 70px;
+}
+
+/* Header Section */
 header {
     position: relative;
-    top: 0;
+    top: 10px;
     color: #fff; /* White text */
     padding: 40px 20px; /* Padding inside the hero section */
     text-align: center;
@@ -23,86 +28,70 @@ header {
 }
 
 header h1 {
-    margin: 0;
-    font-size: 3rem;
+    font-family: Arial, sans-serif;
+    font-size: 2.8em; /* Large bold title */
+    margin-bottom: 20px; /* Spacing below the title */
+    line-height: 1.2;
 }
 
 header p {
-    margin: 10px 0 0;
-    font-size: 1.2rem;
+    font-size: 1.2em; /* Larger text for description */
+    color: #ccc; /* Light gray text for better readability */
+    margin: 0;
+    line-height: 1.6;
 }
 
-/* Button Container */
+/* Scroll Buttons */
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 30px 0;
+    margin: 20px 0;
+    animation: slide-in 0.8s ease-in-out; /* Slide-up for cards */
 }
 
 .scroll-button {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 100px;
+    margin: 30px 20px;
+    border-radius: 10px;
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
+    align-items: center;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: -20px;
+}
+
+.scroll-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .scroll-button h2 {
     color: white;
+    text-decoration: none;
     font-size: 1.5rem;
-    text-transform: uppercase;
-    position: relative;
-    z-index: 2; /* Ensure text stays above background */
-    transition: transform 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-.scroll-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1; /* Layer above the background but below text */
-    transition: backdrop-filter 0.3s ease;
-}
-
-.scroll-button:hover {
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-}
-
-.scroll-button:hover::after {
-    backdrop-filter: blur(3px); /* Apply blur only to the background overlay */
-}
-
-/* Prevent blur on text */
-.scroll-button:hover h2 {
-    filter: none; /* Ensure the text is not affected by any filter */
-    transform: translateY(-10px); /* Keep the text movement */
-}
-
-/* Section */
+/* Section Styling */
 .category {
-    padding: 50px 20px;
+    color: black;
+    margin: 80px 0;
+    padding: 10px; /* Add padding for spacing */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
 }
 
 .section-header {
-    text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .section-header h2 {
     font-size: 2rem;
-    color: #000;
+    margin-bottom: 5px;
 }
 
 .section-header p {
@@ -110,7 +99,7 @@ header p {
     color: #666;
 }
 
-/* Grid */
+/* Card Grid */
 .grid {
     display: flex;
     justify-content: center;
@@ -118,78 +107,182 @@ header p {
     flex-wrap: wrap;
 }
 
-/* Cards */
 .card {
-    width: 300px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Space inside the card */
+    text-align: center; /* Center-align the card content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 400px; /* Fixed width for the card */
+    height: 500px; /* Fixed height for the card */
     overflow: hidden;
     cursor: pointer;
-    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    background-color: #fff; /* White background for better contrast */
+    display: flex;
+    flex-direction: column; /* Keep content aligned vertically */
+    align-items: center; /* Center-align items */
+    animation: slide-up 0.8s ease-in-out; /* Slide-up for cards */
+    animation-delay: 0.2s; /* Optional: Stagger animation slightly for each card */
+    animation-fill-mode: both;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    filter: brightness(1.1); /* Brightens card on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
-    border-radius: 8px;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.card h4 {
-    color: #000; /* Black for card titles */
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    margin: 0;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.card-description {
+    width: 100%; /* Full width of the card */
+    text-align: center; /* Align text to the left */
+}
+
+.card-description h4 {
+    font-size: 1.5rem;
     text-align: center;
+    color: #333;
+    margin-top: 15px;
 }
 
+.card-description p {
+    font-size: 16px; /* Increase font size for text */
+    color: black; /* Change text to black */
+    margin-bottom: 15px; /* Add spacing below description */
+    margin-top: 10px;
+}
+
+/* Modal Styling */
 .modal {
-    display: flex;
     position: fixed;
-    z-index: 1000; /* Sit on top */
-    left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 600px; /* Maximum width */
-    border-radius: 8px; /* Rounded corners */
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #007bff;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.modal-content h4 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.restaurant-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.restaurant-item {
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
+.restaurant-info h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.restaurant-info p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Star Rating */
+.star-rating {
+    color: #ffc107;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.star-rating .star {
+    margin-right: 2px;
+}
+
+/* Location Button */
+.location-button {
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.location-button:hover {
+    background-color: #0056b3;
+}
+
+/* Close Button */
+.modal .close{
+    background: #333;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover effect for close button */
+.modal .close:hover {
+    background: #555;
+    transform: rotate(90deg); /* Adds a playful effect */
+}
+
+/* Close button (Cancel) icon hover effect */
+.modal .close:focus {
+    outline: none;
 }
