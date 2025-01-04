@@ -144,7 +144,7 @@
     padding: 30px; /* Padding inside the modal */
     border-radius: 10px;
     max-width: 600px; /* Restrict max width */
-    width: 90%; /* Make it responsive */
+    width: 100%; /* Make it responsive */
     text-align: center; /* Center text alignment */
     display: flex; /* Use flexbox for alignment */
     flex-direction: column; /* Arrange content vertically */
