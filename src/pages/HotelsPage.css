@@ -1,8 +1,20 @@
 .hotels-page {
-    padding: 80px; /* Increased padding */
+    padding: 0;
     text-align: center;
-    background-color: #fff; /* Ensure background is white */
-    color: #333; /* Default text color is dark */
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 0;
+    min-height: 100vh;
+    color: #333;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
 }
 
 .hotels-list {
@@ -13,10 +25,11 @@
 
 /* Style the header */
 .hotels-header {
+    position: relative;
     margin-bottom: 0; /* Increased bottom margin */
     font-family: Arial, sans-serif;
     background: linear-gradient(45deg, #222, #555);
-    width: 1500px;
+    width: 100%;
 }
 
 .hotels-header h1 {

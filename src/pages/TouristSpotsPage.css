@@ -8,6 +8,7 @@
     justify-items: center;
     align-items: center;
     width: 100%;
+    max-width: 1200px;
     margin: 80px auto 0;
     min-height: 100vh;
     color: #333;
@@ -23,12 +24,12 @@
     color: #fff; /* White text */
     padding: 40px 20px; /* Padding inside the hero section */
     text-align: center;
+    width: 100%;
     border-bottom: 4px solid #222;
     animation: fade-in 1s ease-in-out;
     box-sizing: border-box;
     background: linear-gradient(45deg, #222, #555);
     z-index: 10;
-    width: 1500px;
 }
 
 .tourist-spots-header h1 {
