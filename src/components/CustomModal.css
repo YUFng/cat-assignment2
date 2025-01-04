@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     max-width: 400px;
-    width: 90%;
+    width: 100%;
     text-align: center;
     position: relative;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb); /* Vibrant gradient */

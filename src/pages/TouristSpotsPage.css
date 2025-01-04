@@ -143,7 +143,7 @@
 
     /* Card Adjustments: Slightly narrower cards on mobile */
     .tourist-spots-card {
-        width: 90%;
+        width: 100%;
         padding: 20px;
     }
 
