@@ -129,9 +129,20 @@
     border-radius: 10px;
     max-width: 600px; /* Restrict max width */
     width: 90%; /* Make it responsive */
-    text-align: center;
+    text-align: center; /* Center text alignment */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Arrange content vertically */
+    align-items: center; /* Center align all content */
+    justify-content: center; /* Center content vertically */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     position: relative; /* For positioning the close button */
+}
+
+.modal-content h1,
+.modal-content p,
+.modal-content button {
+    margin: 10px 0; /* Consistent margins */
+    text-align: center; /* Explicitly ensure text alignment */
 }
 
 .close-modal {
@@ -199,6 +210,8 @@
     font-size: 1rem; /* Consistent font size */
     cursor: pointer;
     transition: transform 0.2s, background-color 0.3s;
+    min-height: 60px;
+    max-height: 75px;
     width: 30%; /* Ensure all buttons have the same width */
     max-width: 150px; /* Optional: Restrict the maximum width */
     text-align: center; /* Center text inside the buttons */
