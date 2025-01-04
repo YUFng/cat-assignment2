@@ -1,7 +1,7 @@
 .hero-section {
     text-align: center; /* If you want to center-align text */
     font-family: Arial, sans-serif; /* Add font styles if needed */
-    padding: 0px 20px; /* Optional padding */
+    padding: 0 20px; /* Optional padding */
 }
 
 .hero-section h2 {
@@ -108,3 +108,31 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 768px) {
+
+    .hero-section h2{
+        font-size: 2.5rem;
+    }
+
+    .hero-section p{
+        font-size: 2rem;
+    }
+
+    .gallery-section h2{
+        font-size: 2rem;
+    }
+
+    .info-section h2{
+        font-size: 2rem;
+    }
+
+    .info-section p{
+        font-size: 1.3rem;
+    }
+
+    .gallery-image{
+        width: 350px;
+        height: auto;
+    }
+
+}

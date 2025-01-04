@@ -11,7 +11,7 @@ function HomePage() {
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    height: "100vh",
+                    height: "80vh",
                     padding: "20px",
                     display: "flex",
                     flexDirection: "column",
