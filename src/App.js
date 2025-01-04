@@ -114,10 +114,10 @@ function App() {
                     <div className="footer-nav">
                         <h2>Quick Links</h2>
                         <nav className="footer-buttons">
-                            <b href="/" className="footer-button">Home</b>
-                            <b href="/tourist-spots" className="footer-button">Tourist Spots</b>
-                            <b href="/foodbeverage" className="footer-button">Food & Beverages</b>
-                            <b href="/hotel" className="footer-button">Hotels</b>
+                            <a href="/" className="footer-button">Home</a>
+                            <a href="/tourist-spots" className="footer-button">Tourist Spots</a>
+                            <a href="/foodbeverage" className="footer-button">Food & Beverages</a>
+                            <a href="/hotel" className="footer-button">Hotels</a>
                         </nav>
                     </div>
                 </div>

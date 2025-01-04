@@ -17,8 +17,6 @@ body {
 
 /* Toolbar Styles */
 .toolbar {
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat;
   width: 100%;
   height: 80px;
   padding: 10px 20px; /* Optional inner spacing */
@@ -229,6 +227,19 @@ body {
   justify-content: center; /* Center buttons */
   gap: 25px; /* Spacing between buttons */
   flex-wrap: wrap;
+}
+
+.footer-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
 .contact-button {
