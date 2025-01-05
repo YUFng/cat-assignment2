@@ -100,7 +100,7 @@ const hotelsData = [
         description: 'Discover the beauty of the desert at Bayview Hotel Georgetown, offering luxury and adventure.',
         priceRange: '$$$',
         reviews: ['Unique experience!', 'Great service.', 'The desert safari was a highlight.'],
-        bookingLink: 'hhttps://bhgp.bayviewhotels.com'
+        bookingLink: 'https://bhgp.bayviewhotels.com/?gad_source=1&gclid=CjwKCAiA-Oi7BhA1EiwA2rIu21CiJaiV0d4smxxn-dZdTRvpph7Cxw4MX-IaKlcGlZNx6jtcXGnrvhoCD9IQAvD_BwE'
     },
 ];
 

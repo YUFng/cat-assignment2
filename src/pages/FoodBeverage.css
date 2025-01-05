@@ -28,7 +28,6 @@ header {
     animation: fade-in 1s ease-in-out;
     box-sizing: border-box;
     background: linear-gradient(45deg, #222, #555);
-    z-index: 10;
     width: 100%;
 }
 
