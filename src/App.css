@@ -348,6 +348,7 @@ body {
   }
 
   .toolbar-button {
+    text-align: left;
     margin: 0 5px;
     padding: 10px 15px; /* Slightly larger buttons for touch devices */
     width: 150px;
