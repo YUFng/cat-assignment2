@@ -350,6 +350,16 @@ body {
   .toolbar-button {
     margin: 0 5px;
     padding: 10px 15px; /* Slightly larger buttons for touch devices */
+    width: 150px;
+    background-color: #474747;
+    color: white;
+    box-shadow: none;
+  }
+
+  .toolbar-button:hover {
+    background-color: #ffffff; /* Darker teal background on hover */
+    color: #474747; /* Light text on hover for contrast */
+    transform: scale(1.05); /* Slight zoom effect */
   }
 
   .toolbar-nav.open {
