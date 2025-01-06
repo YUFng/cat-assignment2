@@ -99,6 +99,7 @@ body {
 }
 
 .toolbar-nav.open {
+  margin: 10px 95px;
   display: flex;
   transform: translateX(0);
   background-color: #474747;
