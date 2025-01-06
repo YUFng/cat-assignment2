@@ -380,6 +380,7 @@ body {
     display: flex;
     transform: translateX(0);
     background-color: #474747;
+    margin: 0;
   }
 
   .menu-button {

@@ -28,7 +28,7 @@ function HomePage() {
             </section>
 
             <section className="gallery-section">
-                <h2>Scenary</h2>
+                <h2>Scenery</h2>
                 <div className="gallery">
                     <div className="gallery-item">
                         <img
