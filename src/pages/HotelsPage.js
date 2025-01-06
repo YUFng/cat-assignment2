@@ -167,7 +167,7 @@ function HotelsPage() {
             </div>
             {selectedHotel && (
                 <div className="hotel-modal">
-                    <div className="modal-content">
+                    <div className="hotel-modal-content">
                         <button className="close-modal" onClick={() => setSelectedHotel(null)}>×</button>
                         <img src={selectedHotel.image} alt={selectedHotel.name} className="modal-image" />
                         <h2>{selectedHotel.name}</h2>

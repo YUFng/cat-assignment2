@@ -139,7 +139,7 @@
     z-index: 1000;
 }
 
-.modal-content {
+.hotel-modal-content {
     background: #fff; /* White background for the modal */
     padding: 30px; /* Padding inside the modal */
     border-radius: 10px;
@@ -154,9 +154,9 @@
     position: relative; /* For positioning the close button */
 }
 
-.modal-content h1,
-.modal-content p,
-.modal-content button {
+.hotel-modal-content h1,
+.hotel-modal-content p,
+.hotel-modal-content button {
     margin: 10px 0; /* Consistent margins */
     text-align: center; /* Explicitly ensure text alignment */
 }
@@ -179,8 +179,8 @@
 
 .modal-image {
     width: 100%;
-    max-height: 300px; /* Restrict height */
-    object-fit: cover;
+    max-height: 250px; /* Restrict height */
+    object-fit: contain;
     border-radius: 10px;
     margin-bottom: 20px; /* Space below the image */
 }
@@ -256,4 +256,27 @@
 .eats-button:hover {
     transform: translateY(-3px); /* Lift effect on hover */
     filter: brightness(1.1); /* Brighten the button on hover */
+}
+
+@media (max-width: 768px) {
+    .hotel-modal-content{
+        width: 350px;
+        height: 550px;
+    }
+
+    .hotel-modal-content h2{
+        font-size: 1.5rem;
+    }
+
+    .modal-image{
+        height: 150px;
+    }
+
+    .hotel-rating {
+        margin: 0;
+    }
+
+    .button-group {
+        gap: 10px;
+    }
 }
