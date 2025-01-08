@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage"; // Importing the HomePage component
-import TouristSpotsPage from "./pages/TouristSpotsPage"; // Importing the TouristSpotsPage component
+import HomePage from "./pages/HomePage";
+import TouristSpotsPage from "./pages/TouristSpotsPage";
 import HotelsPage from './pages/HotelsPage';
 import FoodBeverage from "./pages/FoodBeverage";
-import "./App.css"; // Ensure you import your CSS file for styling.
+import "./App.css";
 
 function App() {
     const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +13,7 @@ function App() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
     const handleScroll = () => {
-        if (window.scrollY > 300) { // Show button after scrolling 300px
+        if (window.scrollY > 300) {
             setIsVisible(true);
         } else {
             setIsVisible(false);
