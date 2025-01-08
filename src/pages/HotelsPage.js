@@ -106,9 +106,9 @@ const hotelsData = [
 
 
 const getStars = (rating) => {
-    const fullStars = Math.floor(rating); // Number of full stars
-    const halfStar = rating % 1 >= 0.5 ? 1 : 0; // Check for half star
-    const emptyStars = 5 - fullStars - halfStar; // Remaining stars
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 >= 0.5 ? 1 : 0;
+    const emptyStars = 5 - fullStars - halfStar;
 
     return (
         <>
