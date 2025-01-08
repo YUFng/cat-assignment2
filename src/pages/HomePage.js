@@ -36,7 +36,7 @@ function HomePage() {
                             alt="Description 1"
                             className="gallery-image"
                         />
-                        <p className="image-description">This is Penang Hill.</p>
+                        <p className="image-description">This is Komtar.</p>
                     </div>
 
                     <div className="gallery-item">
