@@ -1,4 +1,3 @@
-/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,12 +11,11 @@ body {
     padding: 70px;
 }
 
-/* Header Section */
 header {
     position: relative;
     top: 10px;
-    color: #fff; /* White text */
-    padding: 40px 20px; /* Padding inside the hero section */
+    color: #fff;
+    padding: 40px 20px;
     text-align: center;
     width: 100%;
     border-bottom: 4px solid #222;
@@ -29,24 +27,23 @@ header {
 
 header h1 {
     font-family: Arial, sans-serif;
-    font-size: 2.8em; /* Large bold title */
-    margin-bottom: 20px; /* Spacing below the title */
+    font-size: 2.8em;
+    margin-bottom: 20px;
     line-height: 1.2;
 }
 
 header p {
-    font-size: 1.2em; /* Larger text for description */
-    color: #ccc; /* Light gray text for better readability */
+    font-size: 1.2em;
+    color: #ccc;
     margin: 0;
     line-height: 1.6;
 }
 
-/* Scroll Buttons */
 .button-container {
     display: flex;
     justify-content: center;
     margin: 20px 0;
-    animation: slide-in 0.8s ease-in-out; /* Slide-up for cards */
+    animation: slide-in 0.8s ease-in-out;
 }
 
 .scroll-button {
@@ -77,12 +74,11 @@ header p {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Section Styling */
 .category {
     color: black;
     margin: 80px 0;
-    padding: 10px; /* Add padding for spacing */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+    padding: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .section-header {
@@ -99,7 +95,6 @@ header p {
     color: #666;
 }
 
-/* Card Grid */
 .grid {
     display: flex;
     justify-content: center;
@@ -108,22 +103,22 @@ header p {
 }
 
 .card {
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 15px; /* Space inside the card */
-    text-align: center; /* Center-align the card content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    width: 400px; /* Fixed width for the card */
-    height: 500px; /* Fixed height for the card */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 500px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    background-color: #fff; /* White background for better contrast */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
     display: flex;
-    flex-direction: column; /* Keep content aligned vertically */
-    align-items: center; /* Center-align items */
-    animation: slide-up 0.8s ease-in-out; /* Slide-up for cards */
-    animation-delay: 0.2s; /* Optional: Stagger animation slightly for each card */
+    flex-direction: column;
+    align-items: center;
+    animation: slide-up 0.8s ease-in-out;
+    animation-delay: 0.2s;
     animation-fill-mode: both;
 }
 
@@ -142,8 +137,8 @@ header p {
 }
 
 .card-description {
-    width: 100%; /* Full width of the card */
-    text-align: center; /* Align text to the left */
+    width: 100%;
+    text-align: center;
 }
 
 .card-description h4 {
@@ -154,13 +149,12 @@ header p {
 }
 
 .card-description p {
-    font-size: 16px; /* Increase font size for text */
-    color: black; /* Change text to black */
-    margin-bottom: 15px; /* Add spacing below description */
+    font-size: 16px;
+    color: black;
+    margin-bottom: 15px;
     margin-top: 10px;
 }
 
-/* Modal Styling */
 .modal {
     position: fixed;
     top: 0;
@@ -229,7 +223,6 @@ header p {
     color: #666;
 }
 
-/* Star Rating */
 .star-rating {
     color: #ffc107;
     font-size: 1rem;
@@ -241,7 +234,7 @@ header p {
     margin-right: 2px;
 }
 
-/* Location Button */
+
 .location-button {
     background-color: #007bff;
     color: white;
@@ -256,7 +249,7 @@ header p {
     background-color: #0056b3;
 }
 
-/* Close Button */
+
 .modal .close{
     background: #333;
     color: #fff;
@@ -276,13 +269,13 @@ header p {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Hover effect for close button */
+
 .modal .close:hover {
     background: #555;
-    transform: rotate(90deg); /* Adds a playful effect */
+    transform: rotate(90deg);
 }
 
-/* Close button (Cancel) icon hover effect */
+
 .modal .close:focus {
     outline: none;
 }
