@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff; /* Set background to white */
+  background-color: #ffffff;
   color: #ffffff;
   text-align: center;
   display: flex;
@@ -10,23 +10,23 @@ body {
 }
 
 * {
-  box-sizing: border-box; /* Includes padding and border in width calculations */
-  margin: 0; /* Removes default margins */
-  padding: 0; /* Removes default paddings */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Toolbar Styles */
+
 .toolbar {
   width: 100%;
   height: 80px;
-  padding: 10px 20px; /* Optional inner spacing */
+  padding: 10px 20px;
   position: relative;
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack items vertically */
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  top: 0; /* Position at the top of the page */
-  left: 0; /* Align to the left of the viewport */
-  color: white; /* Text color */
+  top: 0;
+  left: 0;
+  color: white;
   z-index: 1000;
   background: rgb(16, 31, 55);
   border: none;
@@ -57,8 +57,8 @@ body {
 }
 
 .logo-image {
-  height: 45px; /* Adjust the height as needed */
-  width: auto; /* Maintain aspect ratio */
+  height: 45px;
+  width: auto;
 }
 
 .toolbar-nav {
@@ -81,11 +81,11 @@ body {
 .toolbar-button {
   text-align: left;
   margin: 0 5px;
-  padding: 10px 15px; /* Slightly larger buttons for touch devices */
+  padding: 10px 15px;
   width: 150px;
   font-size: 1rem;
-  background-color: #474747; /* Buttons have a white background */
-  color: #ffffff; /* Text matches the toolbar background */
+  background-color: #474747;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -93,9 +93,9 @@ body {
 }
 
 .toolbar-button:hover {
-  background-color: #ffffff; /* Darker teal background on hover */
-  color: #474747; /* Light text on hover for contrast */
-  transform: scale(1.05); /* Slight zoom effect */
+  background-color: #ffffff;
+  color: #474747;
+  transform: scale(1.05);
 }
 
 .toolbar-nav.open {
@@ -126,8 +126,8 @@ body {
 
 .back-to-top {
   position: fixed;
-  bottom: 30px; /* Adjust position as needed */
-  right: 20px; /* Adjust position as needed */
+  bottom: 30px;
+  right: 20px;
   background-color: #57bbe1;
   color: white;
   border: none;
@@ -137,7 +137,7 @@ body {
   font-size: 46px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   display: block;
-  z-index: 1000; /* Ensure it's on top */
+  z-index: 1000;
   transition: background-color 0.3s ease;
 }
 
@@ -146,24 +146,22 @@ body {
   transform: scale(1.1);
 }
 
-/* General footer styles */
 .footer {
   background-color: #101f37;
-  padding: 20px 20px; /* Spacing inside the section */
-  text-align: center; /* Center-align content */
+  padding: 20px 20px;
+  text-align: center;
   border-top: 1px solid #ddd;
   position: relative;
   bottom: 0;
-  width: 100%; /* Full width */
+  width: 100%;
   height: 100%;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for separation */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 0;
 }
 
-/* Layout container */
 .footer-container {
   //display: grid;
-  //grid-template-columns: 1fr 1fr 1fr; /* Three equal parts */
+  //grid-template-columns: 1fr 1fr 1fr;
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -174,21 +172,19 @@ body {
   text-align: left;
 }
 
-/* Website Logo */
 .footer-logo {
   text-align: center;
   margin-bottom: 30px;
 }
 
 .website-logo {
-  width: 250px; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 250px;
+  height: auto;
   display: block;
   margin: 0 0;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1)); /* Optional shadow for better visibility */
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
 }
 
-/* About Us styles */
 .footer-about {
   margin: 20px;
   flex: 1;
@@ -210,14 +206,13 @@ body {
   text-align: left;
 }
 
-/* Contact Us styles */
 .footer-contact {
   margin-top: 20px;
   flex: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
+  align-items: center;
   justify-content: center;
 }
 
@@ -228,8 +223,8 @@ body {
 }
 
 .footer-about, .footer-contact, .footer-nav {
-  flex: 1; /* Allow sections to grow/shrink equally */
-  min-width: 250px; /* Minimum width for each section */
+  flex: 1;
+  min-width: 250px;
 }
 
 .footer-about . {
@@ -241,8 +236,8 @@ body {
   margin: 10px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center buttons */
-  gap: 25px; /* Spacing between buttons */
+  justify-content: center;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
@@ -256,7 +251,7 @@ body {
 }
 
 .footer-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
 }
 
 .contact-button {
@@ -267,8 +262,8 @@ body {
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
-  border: none; /* Remove borders */
-  border-radius: 5px; /* Rounded corners */
+  border: none;
+  border-radius: 5px;
   color: #fff;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -311,7 +306,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 15px; /* Space between buttons */
+  gap: 5px;
   margin-top: 10px;
 }
 
@@ -331,15 +326,14 @@ body {
 }
 
 .arr {
-  background-color: #101f37; /* Background color for the footer */
-  text-align: center; /* Center the text */
-  padding: 10px 0; /* Vertical padding */
-  position: relative; /* Positioning context for the footer */
-  width: 100%; /* Full width */
+  background-color: #101f37;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Adjust for smaller screens */
 @media (max-width: 768px) {
   .toolbar{
     padding: 0;
@@ -368,7 +362,7 @@ body {
   .toolbar-button {
     text-align: left;
     margin: 0 5px;
-    padding: 10px 15px; /* Slightly larger buttons for touch devices */
+    padding: 10px 15px;
     width: 150px;
     background-color: #474747;
     color: white;
@@ -389,31 +383,31 @@ body {
   }
 
   .website-logo {
-    width: 250px; /* Adjust size as needed */
+    width: 250px;
 
   }
 
   .footer-container {
-    flex-direction: column; /* Stack sections vertically */
-    align-items: center; /* Center-align content */
+    flex-direction: column;
+    align-items: center;
     gap: 0;
   }
 
   .footer-buttons {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 5px;
-    align-items: center; /* Center-align buttons */
+    align-items: center;
   }
 
   .footer-contact,
   .footer-nav {
-    width: 100%; /* Make both sections full width */
+    width: 100%;
   }
 
   .footer-about, .footer-contact h2, .footer-nav {
-    padding: 5px; /* Less padding for mobile */
-    font-size: 1rem; /* Smaller text for all sections */
+    padding: 5px;
+    font-size: 1rem;
   }
 
   .footer-nav h2{
@@ -429,14 +423,14 @@ body {
   }
 
   .contact-buttons, .footer-buttons {
-    gap: 8px; /* Reduce button spacing */
+    gap: 8px;
     align-content: center;
 
   }
 
   .contact-button, .footer-button {
-    font-size: 0.75rem; /* Even smaller button text */
-    padding: 10px 15px; /* Compress button padding */
+    font-size: 0.75rem;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     text-align: center;
@@ -456,12 +450,12 @@ body {
   }
 
   .arr {
-    font-size: 0.75rem; /* Slightly smaller text for mobile */
+    font-size: 0.75rem;
   }
 
   .back-to-top {
     right: 2.2rem;
-    padding: 10px; /* Smaller padding for mobile */
-    font-size: 30px; /* Smaller font size for mobile */
+    padding: 10px;
+    font-size: 30px;
   }
 }

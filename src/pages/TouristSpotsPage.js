@@ -1,13 +1,13 @@
 import React from "react";
 import "./TouristSpotsPage.css";
-import TouristSpotsCard  from "../components/TouristSpotsCard"// Import the CSS file
+import TouristSpotsCard  from "../components/TouristSpotsCard"
 
 const TouristSpotsPage = () => {
     const places = [
         {
             name: "Penang Hill",
             description: "A scenic hilltop offering stunning views of Penang.",
-            image: "/images/penang-hill.jpg", // Replace with a real image URL
+            image: "/images/penang-hill.jpg",
             location: "George Town, Penang",
             mapLink: 'https://www.google.com/maps/place/Penang+Hill',
             rating: 4.7,

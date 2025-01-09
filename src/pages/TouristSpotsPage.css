@@ -17,12 +17,11 @@
     flex-direction: column;
 }
 
-/* Hero section (Title and description) */
 .tourist-spots-header{
     position: relative;
     top: 0;
-    color: #fff; /* White text */
-    padding: 40px 20px; /* Padding inside the hero section */
+    color: #fff;
+    padding: 40px 20px;
     text-align: center;
     width: 100%;
     border-bottom: 4px solid #222;
@@ -33,14 +32,14 @@
 
 .tourist-spots-header h1 {
     font-family: Arial, sans-serif;
-    font-size: 2.8em; /* Large bold title */
-    margin-bottom: 20px; /* Spacing below the title */
+    font-size: 2.8em;
+    margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .tourist-spots-header p {
-    font-size: 1.2em; /* Larger text for description */
-    color: #ddd; /* Light gray text for better readability */
+    font-size: 1.2em;
+    color: #ddd;
     margin: 0;
     line-height: 1.6;
 }
@@ -48,9 +47,9 @@
 .tourist-spots-list {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px; /* Separation from the title area */
+    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Flexible columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin: 80px auto;
     max-width: 1200px;
@@ -61,24 +60,21 @@
     align-items: start;
 }
 
-/* Individual card styling */
 .tourist-spots-card {
     width: 300px;
     background-color: #fff;
     padding: 100px;
-    border-radius: 12px; /* Rounded edges */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
-/* Card hover effect */
 .tourist-spots-card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Title within the card */
 .tourist-spots-card h2 {
     font-size: 1.5em;
     color: #333;
@@ -86,7 +82,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* Image within the card */
 .tourist-spots-card img {
     width: 100%;
     height: 200px;
@@ -95,14 +90,12 @@
     margin-bottom: 15px;
 }
 
-/* Description within the card */
 .tourist-spots-card p {
     font-size: 0.95em;
     color: #555;
     line-height: 1.4;
 }
 
-/* Card rating styling */
 .tourist-spots-card .rating {
     font-style: italic;
     color: #888;
@@ -116,39 +109,34 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 0; /* Ensure the overlay sits behind the content */
+    z-index: 0;
 }
 
 @media (max-width: 768px) {
-    /* Hero Section: Optimize text size and padding */
     .tourist-spots-hero {
         padding: 40px 20px;
     }
 
     .tourist-spots-hero h1 {
-        font-size: 2em; /* Smaller title text */
+        font-size: 2em;
     }
 
     .tourist-spots-hero p {
-        font-size: 1em; /* Smaller description text */
+        font-size: 1em;
     }
 
-    /* Cards Grid: Stack cards in a single column */
     .tourist-spots-list {
         display: flex;
-        flex-direction: column; /* Vertical stacking */
-        align-items: center; /* Center cards */
-        gap: 20px; /* Spacing between stacked cards */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-    /* Card Adjustments: Slightly narrower cards on mobile */
     .tourist-spots-card {
         width: 100%;
         padding: 20px;
     }
 
-
-    /* Card titles become smaller for mobile */
     .tourist-spots-card h2 {
         font-size: 1.2em;
     }
@@ -157,21 +145,21 @@
 @keyframes fade-in {
     from {
         opacity: 0;
-        transform: translateY(-20px); /* Slide down */
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Normal position */
+        transform: translateY(0);
     }
 }
 
 @keyframes slide-up {
     from {
         opacity: 0;
-        transform: translateY(50px); /* Slide up */
+        transform: translateY(50px);
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Normal position */
+        transform: translateY(0);
     }
 }

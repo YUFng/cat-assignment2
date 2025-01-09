@@ -7,7 +7,7 @@ function HomePage() {
             <section
                 className="hero-section"
                 style={{
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/penang-bridge.jpg)`, // Access the image dynamically
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/penang-bridge.jpg)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -18,7 +18,7 @@ function HomePage() {
                     justifyContent: "center",
                     alignItems: "center",
                     opacity: 0.9,
-                    color: "rgba(300, 300, 300, 0.8)", // Slight transparency for white text
+                    color: "rgba(300, 300, 300, 0.8)",
                 }}
             >
                 <h2>Welcome to Visit Penang</h2>

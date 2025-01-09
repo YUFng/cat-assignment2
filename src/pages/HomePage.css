@@ -1,7 +1,7 @@
 .hero-section {
-    text-align: center; /* If you want to center-align text */
-    font-family: Arial, sans-serif; /* Add font styles if needed */
-    padding: 0 20px; /* Optional padding */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 0 20px;
 }
 
 .hero-section h2 {
@@ -23,7 +23,6 @@
     text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
 }
 
-/* Gallery Section */
 .gallery-section {
     padding: 30px 20px;
     background-color: #ffffff;
@@ -38,14 +37,14 @@
 }
 
 .gallery-section h2 {
-    color: #000; /* Set the heading color for Gallery */
-    text-align: center; /* Optional: Center the heading */
-    font-size: 3rem; /* Optional: Adjust the size of the text */
+    color: #000;
+    text-align: center;
+    font-size: 3rem;
 }
 
 .gallery-item {
-    max-width: 550px; /* Optional: Set a fixed width for each image and description */
-    text-align: center; /* Center-align the content inside */
+    max-width: 550px;
+    text-align: center;
 }
 
 .gallery-image {
@@ -62,14 +61,13 @@
 }
 
 .image-description {
-    margin-top: 10px; /* Space between the image and the description */
+    margin-top: 10px;
     font-size: 20px;
     color: #444;
     text-align: center;
     line-height: 1.5;
 }
 
-/* Info Section */
 .info-section {
     padding: 30px 20px;
     background: linear-gradient(45deg, #222, #555);
@@ -77,27 +75,27 @@
 }
 
 .info-section h2 {
-    color: #ffffff; /* Set the heading color (orange-red) */
-    text-align: center; /* Optional: Center the heading */
-    font-size: 3rem; /* Optional: Adjust font size */
-    font-weight: bold; /* Optional: Make it bold */
-    margin-bottom: 20px; /* Add space below heading */
+    color: #ffffff;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .info-section p {
-    color: #ffffff; /* Green for paragraph text */
-    font-size: 1.5rem; /* Paragraph text size */
-    line-height: 1.6; /* Increase text spacing for readability */
-    text-align: center; /* Optional: Keep paragraph centered */
-    margin: 10px 0; /* Spacing above and below each paragraph */
+    color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+    margin: 10px 0;
 }
 
 .info-section img {
-    display: block; /* Treat image as block-level element */
-    margin: 20px auto; /* Center the image with margin */
-    max-width: 100%; /* Responsive image */
-    border-radius: 10px; /* Optional: Rounded image corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .info-image {

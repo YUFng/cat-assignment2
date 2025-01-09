@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage"; // Importing the HomePage component
-import TouristSpotsPage from "./pages/TouristSpotsPage"; // Importing the TouristSpotsPage component
+import HomePage from "./pages/HomePage";
+import TouristSpotsPage from "./pages/TouristSpotsPage";
 import HotelsPage from './pages/HotelsPage';
 import FoodBeverage from "./pages/FoodBeverage";
-import "./App.css"; // Ensure you import your CSS file for styling.
+import AboutUs from "./pages/AboutUs";
+import "./App.css";
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ function App() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
     const handleScroll = () => {
-        if (window.scrollY > 300) { // Show button after scrolling 300px
+        if (window.scrollY > 300) {
             setIsVisible(true);
         } else {
             setIsVisible(false);
@@ -40,9 +41,9 @@ function App() {
                     <a href="/" className="app-logo">
                         <img src="/images/logo.png" alt="Discover Penang Logo" className="logo-image"/>
                     </a>
-                    {/* Mobile Menu Button */}
+                    {}
                     <button className="menu-button" onClick={toggleMenu}>
-                        <span className="menu-icon">&#9776;</span> {/* Hamburger icon */}
+                        <span className="menu-icon">&#9776;</span> {}
                     </button>
                 </div>
                 <nav className={`toolbar-nav ${menuOpen ? "open" : ""}`}>
@@ -50,19 +51,20 @@ function App() {
                     <a href="/tourist-spots" className="toolbar-button">Tourist Spots</a>
                     <a href="/foodbeverage" className="toolbar-button">Food & Beverages</a>
                     <a href="/hotel" className="toolbar-button">Hotels</a>
+                    <a href="/about-us" className="toolbar-button">About Us</a>
                 </nav>
             </header>
             <div>
-                <Routes>
-                    {/* Define your routes */}
+            <Routes>{}
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="/tourist-spots" element={<TouristSpotsPage/>}/>
                     <Route path="/hotel" element={<HotelsPage/>}/>
                     <Route path="/foodbeverage" element={<FoodBeverage/>}/>
+                    <Route path="/about-us" element={<AboutUs />} />
                 </Routes>
             </div>
 
-            {/* Back to Top Button */}
+            {}
             {isVisible && (
                 <button className="back-to-top" onClick={scrollToTop}>
                     ↑
@@ -118,6 +120,7 @@ function App() {
                             <a href="/tourist-spots" className="footer-button">Tourist Spots</a>
                             <a href="/foodbeverage" className="footer-button">Food & Beverages</a>
                             <a href="/hotel" className="footer-button">Hotels</a>
+                            <a href="/about-us" className="footer-button">About Us</a>
                         </nav>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import React from "react";
 import "./CustomModal.css";
 
 const CustomModal = ({ show, title, description, onMapClick, onHotelClick, onClose }) => {
-    if (!show) return null; // Render nothing if 'show' is false
+    if (!show) return null;
 
     return (
         <div className="modal-overlay">

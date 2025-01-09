@@ -4,14 +4,14 @@ import CustomModal from './CustomModal';
 
 const TouristSpotsCard = ({ name, description, image, mapLink, rating, style }) => {
     const renderStars = (rating) => {
-        // Default rating to 0 if missing or invalid
+
         if (!rating || typeof rating !== "number") {
-            return null; // Don't render stars if the rating is invalid
+            return null;
         }
 
-        const fullStars = Math.floor(rating); // Number of full stars
-        const halfStar = rating % 1 !== 0; // Check if there's a half star
-        const emptyStars = 5 - Math.ceil(rating); // Remaining empty stars
+        const fullStars = Math.floor(rating);
+        const halfStar = rating % 1 !== 0;
+        const emptyStars = 5 - Math.ceil(rating);
 
         return (
             <div className="rating-stars">
@@ -28,21 +28,21 @@ const TouristSpotsCard = ({ name, description, image, mapLink, rating, style }) 
 
     const [showModal, setShowModal] = useState(false);
     const handleCardClick = () => {
-        setShowModal(true); // Open the modal when the card is clicked
+        setShowModal(true);
     };
 
     const handleCloseModal = () => {
-        setShowModal(false); // Close the modal
+        setShowModal(false);
     };
 
     const handleMapClick = () => {
-        window.open(mapLink, "_blank"); // Open the map in a new tab
-        setShowModal(false); // Close the modal
+        window.open(mapLink, "_blank");
+        setShowModal(false);
     };
 
     const handleHotelClick = () => {
-        window.open("/hotel", "_blank"); // Redirect to the hotel page
-        setShowModal(false); // Close the modal
+        window.open("/hotel", "_blank");
+        setShowModal(false);
     };
 
     return (
@@ -57,11 +57,11 @@ const TouristSpotsCard = ({ name, description, image, mapLink, rating, style }) 
                 <div className="tourist-spot-rating">
                     {rating ? (
                         <>
-                            {renderStars(rating)} {/* Renders stars if rating exists */}
+                            {renderStars(rating)} {}
                             <span className="rating-value">({rating}/5)</span>
                         </>
                     ) : (
-                        <span className="no-rating">Rating not available</span> // Show a placeholder for missing ratings
+                        <span className="no-rating">Rating not available</span>
                     )}
                 </div>
             </div>
