@@ -1,4 +1,4 @@
-# Visit Penang
+# Visit Penang Website
 
 "Visit Penang" is a comprehensive travel guide web application built with React. It is designed to help tourists explore the beauty, culture, and cuisine of Penang, Malaysia. The application provides curated information on tourist attractions, local delicacies, and accommodation options, making it the ultimate companion for planning a trip to the "Pearl of the Orient."
 
